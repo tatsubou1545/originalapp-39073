@@ -3,4 +3,11 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  validates :nickname, presence: true
+  validates :dog_number, allow_blank: true, format: { with: /\A[0-9]+\z/ }
+  
+  VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
+    validates :password, format: { with: VALID_PASSWORD_REGEX }
+
+  has_many :posts
 end
