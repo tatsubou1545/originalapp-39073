@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @post = Post.all
+    @post = Post.order("created_at DESC")
   end
   
   def new
@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Item.new(post_params)
+    @post = Post.new(post_params)
     if @post.save
       redirect_to root_path
     else
