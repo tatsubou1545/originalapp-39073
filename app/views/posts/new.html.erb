@@ -1,29 +1,29 @@
-<%= form_with model: @post, local: true do |f|%>
-  <%# render 'error_messages', model: f.object %>
-  <div class="field">
-    <%= f.label :title, "タイトル" %><br />
-    <%= f.text_field :title %>
+<div class="post-contents">
+  <div class="container">
+    <h1 class="h3 mb-10 fw-normal">新規投稿しよう</h1>
+    <%= form_with model: @post, local: true do |f|%>
+      <%= render 'error_messages', model: f.object %>
+      <div class="field">
+        <%= f.label :title, "題名" %>
+        <%= f.text_field :title, class: "form-control", id: "Input-title", placeholder: "題名" %>
+      </div>
+      <div class="field">
+        <%= f.label :content, "投稿内容" %><br />
+        <%= f.text_area :content, class: "form-control", id: "Input-content", placeholder: "投稿内容" %>
+      </div>
+      <div class="field">
+        <%= f.label :category_id, "カテゴリー" %><br />
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class: "form-control text-center", id: "category_select"}) %>
+      </div>
+      <div class="field">
+        <%= f.label :image, "投稿画像" %><br />
+        <%= f.file_field :image, class: "form-control" %>
+      </div>
+      <div id="new-image"></div>   
+      <div class="checkbox mb-3">
+        <%= f.submit "投稿する", class: "w-50 btn btn-lg btn-primary" %>
+      </div>
+      <%= link_to 'トップページ', root_path, class: "return-top" %>
+    <% end %>
   </div>
-
-  <div class="field">
-    <%= f.label :content, "投稿内容" %><br />
-    <%= f.text_area :content, class: :form__text %>
-  </div>
-
-  <div class="field">
-    <%= f.label :category_id, "カテゴリー" %><br />
-    <%= f.collection_select(:category_id, Category.all, :id, :name, {}) %>
-  </div>
-
-  <div class="field">
-    <%= f.label :image, "投稿画像" %><br />
-    <%= f.file_field :image %>
-  </div>
-
-  <div id="new-image"></div>
-
-  <div class="actions">
-    <%= f.submit "保存する" %>
-    <%=link_to 'もどる', root_path %>
-  </div>
-<% end %>
+</div>
