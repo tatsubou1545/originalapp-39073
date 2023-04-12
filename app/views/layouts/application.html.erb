@@ -15,7 +15,7 @@
     <header class="p-3 bg-dark text-white">
       <div class="container-fluid">
         <div class="d-flex flex-wrap align-items-center justify-content-space-between justify-content-lg-start">
-          <h2><a href="/" class="mb-2 mb-lg-0 text-white">Patte à Patte</a></h2>
+          <h2 style="padding-right: 20px;"><a href="/" class="mb-2 mb-lg-0 text-white">Patte à Patte</a></h2>
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li><a href="#" class="nav-link px-2 text-white">Room</a></li>
             <li><a href="#" class="nav-link px-2 text-white">MyPage</a></li>
@@ -24,8 +24,8 @@
             <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
           </form>
           <div class="text-end">
-            <button type="button" class="btn btn-outline-light me-2">Login</button>
-            <button type="button" class="btn btn-warning">Sign-up</button>
+            <button type="button" class="btn btn-outline-light me-2"><%= link_to "Login", user_session_path, class: "text-decoration-none", style: "color: white;"%></button>
+            <button type="button" class="btn btn-warning"><%= link_to "Sign-up", new_user_registration_path, class: "text-decoration-none", style: "color: Black;" %></button>
           </div>
         </div>
       </div>
