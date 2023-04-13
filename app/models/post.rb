@@ -1,7 +1,4 @@
 class Post < ApplicationRecord
-  extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :category
-
   validates :title, presence: true
   validates :content, presence: true
   validates :image, presence: true
