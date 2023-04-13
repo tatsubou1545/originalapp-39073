@@ -66,10 +66,7 @@ gem 'devise'
 
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
-<<<<<<< HEAD
 
 gem 'active_hash'
 
 gem 'rails-i18n'
-=======
->>>>>>> parent of 622f279 (Merge pull request #17 from tatsubou1545/投稿保存機能)
