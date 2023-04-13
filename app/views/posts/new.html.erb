@@ -2,10 +2,10 @@
   <div class="container">
     <h1 class="h3 mb-10 fw-normal">新規投稿しよう</h1>
     <%= form_with model: @post, local: true do |f|%>
-      <%= render 'error_messages', model: f.object %>
+      <%= render 'shared/error_messages', model: f.object %>
       <div class="field">
-        <%= f.label :title, "題名" %>
-        <%= f.text_field :title, class: "form-control", id: "Input-title", placeholder: "題名" %>
+        <%= f.label :title, "タイトル" %>
+        <%= f.text_field :title, class: "form-control", id: "Input-title", placeholder: "タイトル" %>
       </div>
       <div class="field">
         <%= f.label :content, "投稿内容" %><br />
