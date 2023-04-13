@@ -26,15 +26,21 @@ section p,
   text-decoration: underline #CCFFCC;
 }
 
+.album{
+  background-color: #EEEEEE;
+}
+
 .index-picture{
   width: 100%;
-  margin-bottom: 25px;
   background-color: white;
 }
 
 .card-body{
-  height: 400px;
-  background-color: blanchedalmond;
+  height: 450px;
+}
+
+.tilte-line{
+  border-bottom: 1px solid
 }
 
 

@@ -17,6 +17,11 @@ RSpec.describe Post, type: :model do
         @post.valid?
         expect(@post.errors.full_messages).to include("Title can't be blank")
       end
+      it 'タイトルが46文字では登録できない' do
+        @post.title = Faker::Internet.password(min_length: 46)
+        @post.valid?
+        expect(@post.errors.full_messages).to include("Title is too long (maximum is 45 characters)")
+      end
       it '説明文が空では登録できない' do
         @post.content = ''
         @post.valid?
