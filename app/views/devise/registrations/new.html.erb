@@ -5,9 +5,7 @@
       新規ユーザー情報入力
     </h2>
   </div>
-
   <%= render 'shared/error_messages', model: f.object %>
-
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">ニックネーム</label>
@@ -85,8 +83,6 @@
       </div>
     <%= f.text_area :dog_profile, class:"input-default", id:"dog_profile", placeholder:"例) かわいい家族です。" %>
   </div>
-
-
   <div class="form-group">
     <div class='register-btn'>
       <%= f.submit "会員登録" ,class:"register-red-btn" %>

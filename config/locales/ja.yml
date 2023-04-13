@@ -2,3 +2,13 @@ ja:
   time:
     formats:
       default: "%Y/%m/%d"
+  activerecord:
+    attributes:
+      user:
+        nickname: "ニックネーム"
+        dog_number: 飼育数
+      post:
+        title: "タイトル"
+        content: "投稿内容"
+        category_id: "カテゴリー"
+        image: "画像"
