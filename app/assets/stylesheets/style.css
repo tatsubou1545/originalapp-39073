@@ -29,16 +29,14 @@ section p,
 .index-picture{
   width: 100%;
   margin-bottom: 25px;
+  background-color: white;
 }
 
 .card-body{
-  height: 500px;
+  height: 400px;
+  background-color: blanchedalmond;
 }
 
-
-.top-page h2{
-  font-size: ;
-}
 
 
 /* 新規投稿画面 */
