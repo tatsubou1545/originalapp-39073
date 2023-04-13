@@ -1,7 +1,43 @@
 /* 一覧画面 */
+.main-top{
+  width: 100%;
+  height: 400px;
+  background-image: url("top.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.main-top .container {
+  width: 100%;
+  height: 100%;  
+}
+
+.main-top .content {
+  width: 50%;
+  height: 100px;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+}
+
+section p,
+        h2{
+  font-size: 20px;
+  text-decoration: underline #CCFFCC;
+}
+
 .index-picture{
   width: 100%;
   margin-bottom: 25px;
+}
+
+.card-body{
+  height: 500px;
+}
+
+
+.top-page h2{
+  font-size: ;
 }
 
 
