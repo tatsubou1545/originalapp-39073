@@ -17,9 +17,9 @@
       </div>
       <div class="field">
         <%= f.label :image, "投稿画像" %><br />
-        <%= f.file_field :image, class: "form-control" %>
+        <%= f.file_field :image, class: "form-control", id: "post_image" %>
       </div>
-      <div id="new-image"></div>   
+      <div id="new-image"></div>
       <div class="checkbox mb-3">
         <%= f.submit "投稿する", class: "w-50 btn btn-lg btn-primary" %>
       </div>
