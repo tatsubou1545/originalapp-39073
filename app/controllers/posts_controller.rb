@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
-  before_action :set_params, only: [:show, :edit, :update, :download]
+  before_action :set_params, only: [:show, :edit, :update, :destroy, :download]
   before_action :compare_id, only: [:edit]
 
   def index
@@ -31,6 +31,15 @@ class PostsController < ApplicationController
       redirect_to action: :show
     else
       render :edit
+    end
+  end
+
+  def destroy
+    if user_signed_in?
+      @post.destroy
+      redirect_to action: :index
+    else
+      redirect_to action: :show
     end
   end
 
@@ -81,5 +90,4 @@ class PostsController < ApplicationController
       redirect_to root_path 
     end
   end
-
 end
