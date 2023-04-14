@@ -40,6 +40,7 @@ section p,
 }
 
 .tilte-line{
+  width: 100%;
   border-bottom: 1px solid
 }
 
@@ -73,4 +74,15 @@ section p,
 
 textarea.form-control {
   max-height: 250px;
+}
+
+.field span{
+  background-color: #FFD5EC;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.new-form {
+  margin-top: 30px;
 }
