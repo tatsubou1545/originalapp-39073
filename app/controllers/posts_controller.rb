@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
-  before_action :set_params, only: [:show, :download]
+  before_action :set_params, only: [:show, :edit, :update, :download]
+  before_action :compare_id, only: [:edit]
 
   def index
     @post = Post.order("created_at DESC")
@@ -20,6 +21,17 @@ class PostsController < ApplicationController
   end
 
   def show
+  end
+
+  def edit
+  end
+
+  def update
+    if @post.update(post_params)
+      redirect_to action: :show
+    else
+      render :edit
+    end
   end
 
   def download
@@ -62,6 +74,12 @@ class PostsController < ApplicationController
 
   def set_params
     @post = Post.find(params[:id])
+  end
+
+  def compare_id
+    if current_user.id != @post.user_id
+      redirect_to root_path 
+    end
   end
 
 end
