@@ -1,0 +1,29 @@
+<div class="show-content">
+  <div class="container">
+      <div class="field">
+        <%= image_tag @post.image, class: "show-box-img" %>
+      </div>
+      <div class="field h3 show-box-title">
+        <%= @post.title %>
+      </div>
+      <div class="field show-box-content">
+        <%= @post.content %>
+      </div>
+      <div class="field show-box-category">
+        カテゴリー：<%= @post.category.name %>
+      </div>
+      <div class="field show-box-nickname">
+        投稿者：<%= @post.user.nickname %>
+      </div>
+      <div class="field show-box-date">
+        投稿日：<%= l @post.created_at %>
+      </div>
+      <div class="show-btn">
+        <%= link_to "ダウンロード", download_post_path, method: :get, class: " btn btn-warning" %>
+        <% if user_signed_in? && current_user.id == @post.user_id%>
+          <%= link_to "編集", edit_post_path, method: :get, class: " btn btn-warning" %>
+          <%= link_to "削除", post_path, method: :delete, class:" btn btn-warning" %>
+        <% end %>
+      </div>
+  </div>
+</div>
