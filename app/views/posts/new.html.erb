@@ -1,22 +1,26 @@
 <div class="post-contents">
   <div class="container">
     <h1 class="h3 mb-10 fw-normal">新規投稿しよう</h1>
-    <%= form_with model: @post, local: true do |f|%>
+    <%= form_with model: @post, local: true, class: "new-form" do |f|%>
       <%= render 'shared/error_messages', model: f.object %>
       <div class="field">
         <%= f.label :title, "タイトル" %>
-        <%= f.text_field :title, class: "form-control", id: "Input-title", placeholder: "タイトル" %>
+        <span>必須</span>
+        <%= f.text_field :title, class: "form-control", id: "Input-title", placeholder: "タイトル(32文字まで)" %>
       </div>
       <div class="field">
-        <%= f.label :content, "投稿内容" %><br />
+        <%= f.label :content, "投稿内容" %>
+        <span>必須</span>
         <%= f.text_area :content, class: "form-control", id: "Input-content", placeholder: "投稿内容" %>
       </div>
       <div class="field">
-        <%= f.label :category_id, "カテゴリー" %><br />
+        <%= f.label :category_id, "カテゴリー" %>
+        <span>必須</span>
         <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class: "form-control text-center", id: "category_select"}) %>
       </div>
       <div class="field">
-        <%= f.label :image, "投稿画像" %><br />
+        <%= f.label :image, "投稿画像" %>
+        <span>必須</span>
         <%= f.file_field :image, class: "form-control", id: "post_image" %>
       </div>
       <div id="new-image"></div>
