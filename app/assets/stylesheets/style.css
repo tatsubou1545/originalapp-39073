@@ -20,8 +20,7 @@
   padding-top: 20px;
 }
 
-section p,
-        h2{
+section p {
   font-size: 20px;
   text-decoration: underline #CCFFCC;
 }
@@ -85,4 +84,45 @@ textarea.form-control {
 
 .new-form {
   margin-top: 30px;
+}
+
+
+/* 詳細画面 */
+.show-content {
+  text-align: center;
+  background-color: beige;
+  padding: 10px 0;
+}
+
+.show-content .container{
+  background-color: white;
+  width: 750px;
+  padding-top: 20px;
+}
+
+.show-box-title,
+.show-box-content,
+.show-box-category,
+.show-box-nickname,
+.show-box-date,
+.show-btn .btn{
+  margin: 15px 0;
+}
+
+.show-box-img {
+  height: 400px;
+  width: 700px;
+  border-radius: 20px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.show-box-title{
+  width: 100%;
+  text-decoration: underline;
+}
+
+.show-box-content{
+  width: 500px;
+  margin: auto;
 }

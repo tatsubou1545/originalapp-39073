@@ -8,7 +8,6 @@
 <section class="py-2 text-center container">
   <div class="row py-lg-5">
     <div class="col-lg-6 col-md-8 mx-auto">
-      <h2 class="fw-light">共有しよう！</h2>
       <p>ログインして写真や情報を投稿してみましょう。</br>ルームチャット機能でコミュニティも作成してみましょう。</p>
       <% if user_signed_in? %>
       <p>
@@ -31,7 +30,7 @@
             </div>
             <h4 class="text-center tilte-line"><%= post.title %></h4>
               <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">詳細</button>
+                <%= link_to "詳細", post_path(post.id), class: "btn btn-sm btn-outline-secondary"%>
                 <button type="button" class="btn btn-sm btn-outline-secondary">編集</button>
               </div>
               <small class="text-muted">投稿者：<%= post.user.nickname %></small>
