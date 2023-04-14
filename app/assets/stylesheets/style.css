@@ -54,21 +54,21 @@ section p {
 
 .post-contents{
   height: 100%;
+  padding: 33px 0;
   text-align: center;
-}
-
-.post-contents h1{
-  margin-top: 40px;
+  background-image: url("background_new.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .post-contents .container {
   max-width: 600px;
   height: 100%;
-  padding-bottom: 45px;
 }
 
 .post-contents .field{
   margin-bottom: 20px;
+  font-weight: 600;
 }
 
 textarea.form-control {
@@ -84,6 +84,10 @@ textarea.form-control {
 
 .new-form {
   margin-top: 30px;
+}
+
+.post-contents .return-top{
+  color: white;
 }
 
 
@@ -125,4 +129,29 @@ textarea.form-control {
 .show-box-content{
   width: 500px;
   margin: auto;
+}
+
+
+/* 編集画面 */
+.edit-contents{
+  height: 100%;
+  text-align: center;
+  padding: 33px 0;
+  background-image: url("background_edit.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.edit-contents .container {
+  width: 650px;
+  height: 100%;
+}
+
+.edit-contents .field{
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.edit-contents .return-top{
+  color: black;
 }
