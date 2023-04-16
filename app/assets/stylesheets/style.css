@@ -43,6 +43,15 @@ section p {
   border-bottom: 1px solid
 }
 
+.hidden{
+  display: none;
+}
+
+.chat-room-form__field{
+  width: 350px;
+  margin: auto;
+}
+
 
 
 /* 新規投稿画面 */
