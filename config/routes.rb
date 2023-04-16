@@ -8,5 +8,7 @@ Rails.application.routes.draw do
       get 'download'
     end
   end
-  resources :rooms, only: [:new, :create]
+  resources :rooms, only: [:index, :create] do
+    resources :messages, only: [:index, :create]
+  end
 end

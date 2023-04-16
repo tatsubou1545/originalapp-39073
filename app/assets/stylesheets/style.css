@@ -171,3 +171,17 @@ textarea.form-control {
 .edit-contents .return-top{
   color: black;
 }
+
+
+/* ルーム一覧画面 */
+.room-index-wrapper{
+  background-color: white;
+}
+
+.room-index-wrapper .container{
+  width: 500px;
+}
+
+.room-index-wrapper .nav-item{
+  font-size: 23px;
+}
