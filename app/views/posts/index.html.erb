@@ -12,7 +12,7 @@
       <% if user_signed_in? %>
       <p>
         <%= link_to "投稿する", new_post_path, class: "btn btn-dark my-2 text-decoration-none"%>
-        <a href="#" class="btn btn-dark my-2">ルームを作成</a>
+        <%= link_to "ルーム作成", new_room_path, class: "btn btn-dark my-2 text-decoration-none"%>
       </p>
       <% end %>
     </div>
