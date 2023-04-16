@@ -19,12 +19,12 @@
       <% end %>
     </div>
     <div class="room-create hidden" id="room-name-create">
-      <%=form_with model: @room, local: true do |f|%>
+      <%=form_with model: @room, method: :post, local: true do |f|%>
         <div class='chat-room-form__field'>
           <%= f.label :name, :チャットルーム名, class: 'chat-room-form__label mb-1'%>
         </div>
         <div class='chat-room-form__field'>
-          <input class="form-control" type="text" placeholder="ルーム名を入力してください">
+          <%= f.text_field :name, class: "form-control", placeholder: "ルーム名を入力してください" %>
         </div>
         <div class='chat-room-form__field mt-3'>
           <%= f.submit "作成する", class: 'chat-room-form__action-btn btn btn-warning'%>

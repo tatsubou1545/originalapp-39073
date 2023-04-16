@@ -5,6 +5,7 @@ class PostsController < ApplicationController
 
   def index
     @post = Post.order("created_at DESC")
+    @room = Room.new
   end
   
   def new
