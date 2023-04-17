@@ -188,46 +188,79 @@ textarea.form-control {
 
 
 /* メッセージ表示画面 */
-.form {
-  background-color: #DDDDDD;
-  height: 90px;
-  padding: 20px 40px;
-  display: flex;
+::-webkit-scrollbar {
+  height: 0;
+  display: none;
 }
 
-.message-form-input {
-  background-color: white;
+hr {
+  overflow: scroll;
+}
+
+.messages{
+  overflow: scroll;
+  height: 100%;
+}
+
+.message-input{
+  margin-bottom: 20px;
+  background-color: #DDDDDD;
+  padding: 10px 49px;
   width: 100%;
+}
+
+.form {
   display: flex;
 }
 
 .form-message {
   border: none;
-  height: 100%;
+  height: 40px;
   width: 100%;
   padding-left: 10px;
+  border-radius: 10px;
 }
 
 .message-form-submit {
   border: none;
   color: black;
+  background-color: #FFFFCC;
+  border-radius: 10px;
   font-size: 16px;
-  height: 50px;
+  height: 40px;
   padding: 0 20px;
-  background-color: transparent;
 }
 
 .message-form-image {
   font-size: 12px;
-  background-color: lightblue;
-  color: white;
-  padding: 20px 12px;
-  width: 60px;
+  height: 40px;
+  width: 90px;
   margin: 5px 10px;
   text-align: center;
 }
 
 .input-group-form{
-  background-color: white;
+  border-radius: 10px;
+  height: 40px;
   width: 1070px;
 }
+
+.upper-message{
+  display: flex;
+}
+
+.lower-message{
+  margin-bottom: 30px;
+}
+
+.message-content{
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
+.message-user{
+  margin-right: 10px;
+  font-weight: 600;
+}
+

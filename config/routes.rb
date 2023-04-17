@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       get 'download'
     end
   end
-  resources :rooms, only: [:index, :create] do
+  resources :rooms, only: [:index, :create, :destroy] do
     resources :messages, only: [:index, :create]
   end
 end
