@@ -1,6 +1,13 @@
 <div class="wrapper">
   <div class="main-chat cotainer" style="height: calc(100% - 80px);">
-    <div class="message-input">
+    <div class="message-input d-flex align-items-center">
+      <div class="dropdown">
+        <div class="dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false"></div>
+          <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+            <li><%= link_to '招待', root_path, class: "dropdown-item" %></li>
+            <li><%= link_to 'ルーム削除', room_path(@room), method: :delete, class: "dropdown-item" %></li>
+          </ul>
+        </div>
       <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
         <div class="input-group">
           <div class="d-flex input-group-form">
