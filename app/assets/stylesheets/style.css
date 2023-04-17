@@ -185,3 +185,49 @@ textarea.form-control {
 .room-index-wrapper .nav-item{
   font-size: 23px;
 }
+
+
+/* メッセージ表示画面 */
+.form {
+  background-color: #DDDDDD;
+  height: 90px;
+  padding: 20px 40px;
+  display: flex;
+}
+
+.message-form-input {
+  background-color: white;
+  width: 100%;
+  display: flex;
+}
+
+.form-message {
+  border: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.message-form-submit {
+  border: none;
+  color: black;
+  font-size: 16px;
+  height: 50px;
+  padding: 0 20px;
+  background-color: transparent;
+}
+
+.message-form-image {
+  font-size: 12px;
+  background-color: lightblue;
+  color: white;
+  padding: 20px 12px;
+  width: 60px;
+  margin: 5px 10px;
+  text-align: center;
+}
+
+.input-group-form{
+  background-color: white;
+  width: 1070px;
+}

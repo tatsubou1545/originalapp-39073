@@ -44,6 +44,8 @@
     </header>
     <%= yield %>
     <footer class="bg-dark text-light">
+    <% if params[:controller] == 'messages' %>
+    <% else %>
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
@@ -56,6 +58,7 @@
           </div>
         </div>
       </div>
+    <% end %>
     </footer>
   </body>
 </html>

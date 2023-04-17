@@ -1,4 +1,21 @@
 <div class="wrapper">
-  <div class="container-fluid">
+  <div class="main-chat">
+    <div class="messages" style=" width: 1255px; height: 585px;">
+      <%= render partial: 'message', collection: @messages %>
+    </div>
+    <div class="message-input">
+      <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
+        <div class="input-group">
+          <div class="d-flex input-group-form">
+          <%= f.text_field :content, class: 'form-message', placeholder: 'メッセージを入力' %>
+          <label class="message-form-image">
+            <span class="image-file">画像</span>
+            <%= f.file_field :image, class: 'hidden' %>
+          </label>
+          </div>
+          <span class="input-group-text" id="basic-addon2"><%= f.submit '送信', class: 'message-form-submit' %></span>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
