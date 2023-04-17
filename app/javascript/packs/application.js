@@ -9,6 +9,7 @@ require("channels")
 require('jquery')
 require("../preview")
 require("../scroll")
+require("../room_create")
 import "bootstrap"
 import "../stylesheets/application"
 

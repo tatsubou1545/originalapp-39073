@@ -5,6 +5,7 @@ class PostsController < ApplicationController
 
   def index
     @post = Post.order("created_at DESC")
+    @room = Room.new
   end
   
   def new
@@ -48,7 +49,6 @@ class PostsController < ApplicationController
       data = @post.image.download
       content_type = ''
       filename = ''
-
       # 画像の形式に応じてMIMEタイプとファイル名を指定する
       if @post.image.content_type == 'image/png'
         content_type = 'image/png'
@@ -60,7 +60,6 @@ class PostsController < ApplicationController
         content_type = 'image/jpeg'
         filename = 'download.jpg'
       end
-
       # 画像を送信する
       send_data(data, type: content_type, filename: filename)
     rescue

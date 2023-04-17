@@ -9,11 +9,26 @@
   <div class="row py-lg-5">
     <div class="col-lg-6 col-md-8 mx-auto">
       <p>ログインして写真や情報を投稿してみましょう。</br>ルームチャット機能でコミュニティも作成してみましょう。</p>
+    </div>
+    <div class="d-flex align-items-center justify-content-center">
       <% if user_signed_in? %>
       <p>
-        <%= link_to "投稿する", new_post_path, class: "btn btn-dark my-2 text-decoration-none"%>
-        <a href="#" class="btn btn-dark my-2">ルームを作成</a>
+        <%= link_to "投稿する", new_post_path, class: "btn btn-dark my-2"%>
+        <button type="button" class="btn btn-dark my-2" id="room_input">ルーム作成</button>
       </p>
+      <% end %>
+    </div>
+    <div class="room-create hidden" id="room-name-create">
+      <%=form_with model: @room, method: :post, local: true do |f|%>
+        <div class='chat-room-form__field'>
+          <%= f.label :name, :チャットルーム名, class: 'chat-room-form__label mb-1'%>
+        </div>
+        <div class='chat-room-form__field'>
+          <%= f.text_field :name, class: "form-control", placeholder: "ルーム名を入力してください" %>
+        </div>
+        <div class='chat-room-form__field mt-3'>
+          <%= f.submit "作成する", class: 'chat-room-form__action-btn btn btn-warning'%>
+        </div>
       <% end %>
     </div>
   </div>

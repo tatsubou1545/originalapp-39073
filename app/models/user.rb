@@ -10,4 +10,7 @@ class User < ApplicationRecord
     validates :password, format: { with: VALID_PASSWORD_REGEX }
 
   has_many :posts
+  has_many :messages
+  has_many :room_users
+  has_many :rooms, through: :room_users
 end

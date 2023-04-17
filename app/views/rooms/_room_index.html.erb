@@ -1,0 +1,18 @@
+<div class="room-index-wrapper">
+  <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; height: 100vh;">
+    <div class="mx-auto text-white text-decoration-none">
+      <span class="fs-4">ルーム一覧</span>
+    </div>
+    <hr>
+    <div class="scroll_bar d-flex flex-column aline-items-center">
+      <% current_user.rooms.each do |room| %>
+        <ul class="nav nav-pills flex-column mb-10 mx-auto">
+          <li class="nav-item">
+            <%= link_to room.name, room_messages_path(room.id), class: "nav-link text-white"%>
+          </li>
+        </ul>
+      <% end %>
+    </div>
+    <hr>
+  </div>
+</div>

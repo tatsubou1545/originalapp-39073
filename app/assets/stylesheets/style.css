@@ -3,7 +3,7 @@
   width: 100%;
   height: 400px;
   background-image: url("top.jpg");
-  background-position: 30% 30%;
+  background-position-y: 30%;
   background-size: cover;
 }
 
@@ -43,6 +43,15 @@ section p {
   border-bottom: 1px solid
 }
 
+.hidden{
+  display: none;
+}
+
+.chat-room-form__field{
+  width: 350px;
+  margin: auto;
+}
+
 
 
 /* 新規投稿画面 */
@@ -57,7 +66,7 @@ section p {
   padding: 66px 0;
   text-align: center;
   background-image: url("background_new.jpg");
-  background-position: center;
+  background-position-y: 60%;
   background-size: cover;
 }
 
@@ -161,4 +170,104 @@ textarea.form-control {
 
 .edit-contents .return-top{
   color: black;
+}
+
+
+/* ルーム一覧画面 */
+.room-index-wrapper{
+  background-color: white;
+}
+
+.room-index-wrapper .container{
+  width: 500px;
+}
+
+.room-index-wrapper .nav-item{
+  font-size: 23px;
+}
+
+
+/* メッセージ表示画面 */
+::-webkit-scrollbar {
+  height: 0;
+  display: none;
+}
+
+.messages{
+  overflow: scroll;
+  height: 100%;
+}
+
+.message-input{
+  margin-bottom: 20px;
+  background-color: #DDDDDD;
+  padding: 10px 45px;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+}
+
+.form-message {
+  border: none;
+  height: 40px;
+  width: 100%;
+  padding-left: 10px;
+  border-radius: 10px;
+}
+
+.message-form-submit {
+  border: none;
+  color: black;
+  background-color: #FFFFCC;
+  border-radius: 10px;
+  font-size: 16px;
+  height: 40px;
+  padding: 0 20px;
+}
+
+.message-form-image {
+  font-size: 12px;
+  height: 40px;
+  width: 90px;
+  margin: 5px 10px;
+  text-align: center;
+}
+
+.input-group-form{
+  border-radius: 10px;
+  height: 40px;
+  width: 1070px;
+}
+
+.upper-message{
+  display: flex;
+}
+
+.lower-message{
+  margin-bottom: 30px;
+}
+
+.message-content{
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
+.message-user{
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.dropdown{
+  margin-right: 15px;
+}
+
+.scroll_bar{
+  overflow: scroll;
+}
+
+ul.nav li.nav-item a.nav-link {
+  font-size: 16px; 
 }
