@@ -193,10 +193,6 @@ textarea.form-control {
   display: none;
 }
 
-hr {
-  overflow: scroll;
-}
-
 .messages{
   overflow: scroll;
   height: 100%;
@@ -266,4 +262,12 @@ hr {
 
 .dropdown{
   margin-right: 15px;
+}
+
+.scroll_bar{
+  overflow: scroll;
+}
+
+ul.nav li.nav-item a.nav-link {
+  font-size: 16px; 
 }

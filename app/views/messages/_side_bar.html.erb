@@ -1,18 +1,18 @@
-<div side-bar-wrapper>
-  <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style=" width: 280px; height: 100%;">
+<div class="side-bar-wrapper">
+  <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; height: 100%;">
     <div class="mx-auto text-white text-decoration-none">
       <div class="fs-4">ルーム一覧</div>
     </div>
     <hr>
+    <div class="scroll_bar d-flex flex-column aline-items-center">
       <% current_user.rooms.each do |room| %>
-      <ul class="nav nav-pills flex-column mb-auto mx-auto room_scroll">
-        <li class="nav-item">
-          <a href="#" class="nav-link text-white" aria-current="page">
-            <%= room.name %>
-          </a>
-        </li>
-      </ul>
-    <% end %>
+        <ul class="nav nav-pills flex-column mb-10 mx-auto">
+          <li class="nav-item">
+            <%= link_to room.name, room_messages_path(room.id), class: "nav-link text-white"%>
+          </li>
+        </ul>
+      <% end %>
+    </div>
     <hr>
   </div>
 </div>
