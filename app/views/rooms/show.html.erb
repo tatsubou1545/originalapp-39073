@@ -1,26 +1,25 @@
-<div class="wrapper">
+<div class="wrapper-show">
   <div class="container">
     <%=form_with url: add_user_room_path, method: :post, local: true do |f|%>
 
-    <div class='chat-room-form__field'>
-      <div class='chat-room-form__field--tilte'>
-        <label class='chat-room-form__label' for='chat_room_チャットメンバー'>チャットメンバー</label>
+    <div class='user_add-form__field'>
+      <div class='user_add-form__field--title'>
+        <label class='user_add-form__label' for='user_add_チャットメンバー'>チャットメンバー</label>
       </div>
-      <div class='chat-room-form__field--input'>
-        <select name="room[user_id]">
-          <option value="">チャットするユーザーを選択してください</option>
+
+      <div class='user_add-form__field--input'>
+        <select name="room[user_id]" class="form-select">
+          <option value="">ルームへ追加するユーザーを選択してください</option>
           <% User.where.not(id: current_user.id).each do |user| %>
             <option value=<%= user.id %>><%= user.nickname %></option>
           <% end %>
         </select>
       </div>
-    </div>
 
-    <div class='chat-room-form__field'>
-      <div class='chat-room-form__field--left'></div>
-      <div class='chat-room-form__field--right'>
-        <%= f.submit "追加する", class: 'chat-room-form__action-btn'%>
-      </div>
+    </div>
+    <div class='user_add-form__field'>
+      <%= f.submit "追加する", class: 'user_add-form__action-btn btn btn-warning'%>
+    </div>
     </div>
   <% end %>
   </div>

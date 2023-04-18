@@ -271,3 +271,29 @@ textarea.form-control {
 ul.nav li.nav-item a.nav-link {
   font-size: 16px; 
 }
+
+
+/* ユーザー追加画面 */
+.wrapper-show .container{
+  height: 635px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.user_add-form__field{
+ text-align: center;
+ width: 550px;
+ margin: auto;
+}
+
+.user_add-form__action-btn{
+  margin-top: 20px;
+}
+
+.user_add-form__field--title{
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
