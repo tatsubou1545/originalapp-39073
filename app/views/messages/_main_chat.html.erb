@@ -4,7 +4,7 @@
       <div class="dropdown">
         <div class="dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false"></div>
           <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-            <li><%= link_to '招待', root_path, class: "dropdown-item" %></li>
+            <li><%= link_to '招待', room_path(@room), class: "dropdown-item" %></li>
             <li><%= link_to 'ルーム削除', room_path(@room), method: :delete, class: "dropdown-item" %></li>
           </ul>
         </div>
