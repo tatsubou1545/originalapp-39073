@@ -86,6 +86,7 @@ https://docs.google.com/spreadsheets/d/1Qo2gGtkPcVQnAIfGzUylmzpu9tJm6oa4jcbs6uJl
 - has_many :messages
 - has_many :room_users
 - has_many :rooms, through: :room_users
+- has_one_attached :image
 
 
 ## posts テーブル

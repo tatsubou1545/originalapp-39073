@@ -1,44 +1,75 @@
 <div class='user-show-wrapper'>
   <div class='container d-flex justify-content-center px-0'>
-
     <div class="user-details-left">
       <div>
-        <div class="user-picture"></div>
+        <div class="user-picture-box">
+          <% if @user.image.present? %>
+            <%= image_tag @user.image, class: "user-picture-box" %>
+          <% else %>
+            <%= image_tag "no_image.png", class: "user-picture-box"%>
+          <% end %>
+        </div>
       </div>
+      <div><%= link_to "編集する", edit_user_path(@user)%></div>
       <div>
         <div class="user-profile">
-          ユーザーのプロフィール
+          <label class="form-text">ユーザープロフィール</label>
+          <% if @user.user_profile.present? %>
+            <div class="form-text"><%= @user.user_profile %></div>
+          <% else %>
+            <div class="form-text">未入力</div>
+          <% end %>
         </div>
         <div class='user-profile-box'>
-          飼育数：5 匹
+          <% if @user.dog_number.present? %>
+            <div class="form-text">飼育数：<%= @user.dog_number %> 匹</div>
+          <% else %>
+            <div class="form-text">飼育数：未入力</div>
+          <% end %>
         </div>
       </div>
     </div>
-
     <div class="user-detail-right">
       <div class="dog-detail-box">
-        <div class='form-text-box'>
+        <%# 後日実装 %>
+        <%# <div class='form-text-box'>
           <label class="form-text">飼犬の写真</label>
           <div class="form-text">画像</div>
-        </div>
+        </div> %>
+        <%# 後日実装 %>
         <div class='form-text-box'>
           <label class="form-text">飼犬の犬種</label>
-          <div class="form-text">トイプードル</div>
+          <% if @user.dog_breed.present? %>
+            <div class="form-text"><%= @user.dog_breed %></div>
+          <% else %>
+            <div class="form-text">未入力</div>
+          <% end %>
         </div>
         <div class='form-text-box'>
           <label class="form-text">飼犬の誕生日</label>
-          <div class="form-text">2018/6/24</div>
+          <% if @user.dog_birthday.present? %>
+            <div class="form-text"><%= @user.dog_birthday.strftime('%Y/%m/%d') %></div>
+          <% else %>
+            <div class="form-text">未入力</div>
+          <% end %>
         </div>
         <div class='form-text-box'>
           <label class="form-text">飼犬の年齢</label>
-          <div class="form-text">3歳</div>
+          <% if @user.dog_birthday.present? %>
+            <div class="form-text"><%= @user.dog_age %> 歳</div>
+          <% else %>
+            <div class="form-text">未入力</div>
+          <% end %>
         </div>
         <div class='form-text-box'>
           <label class="form-text">飼犬のプロフィール</label>
-          <div class="form-text">犬です</div>
+          <% if @user.dog_profile.present? %>
+            <div class="form-text"><%= @user.dog_profile %></div>
+          <% else %>
+            <div class="form-text">未入力</div>
+          <% end %>
         </div>
       </div>
     </div>
-
   </div>
 </div>
