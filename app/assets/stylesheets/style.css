@@ -313,8 +313,18 @@ margin: auto;
 background-color: antiquewhite;
 }
 
+.user-profile,
+.user-profile-box {
+  margin-top: 10px;
+  text-align: center;
+}
+
 .user-detail-right{
-  height: 600px;
+  height: 700px;
   width: 100%;
   background-color: chocolate;
+}
+
+.dog-detail-box{
+  background-color: darkgrey;
 }
