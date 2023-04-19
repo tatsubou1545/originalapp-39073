@@ -297,3 +297,34 @@ ul.nav li.nav-item a.nav-link {
   margin-bottom: 20px;
 }
 
+
+/* ユーザー詳細ｓ画面 */
+.user-details-left{
+  height: 600px;
+  width: 60%;
+  background-color: #CCFFCC;
+}
+
+.user-picture{
+height: 300px;
+width: 300px;
+border-radius: 50%;
+margin: auto;
+background-color: antiquewhite;
+}
+
+.user-profile,
+.user-profile-box {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.user-detail-right{
+  height: 700px;
+  width: 100%;
+  background-color: chocolate;
+}
+
+.dog-detail-box{
+  background-color: darkgrey;
+}

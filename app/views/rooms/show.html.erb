@@ -1,12 +1,10 @@
 <div class="wrapper-show">
   <div class="container">
     <%=form_with url: add_user_room_path, method: :post, local: true do |f|%>
-
     <div class='user_add-form__field'>
       <div class='user_add-form__field--title'>
         <label class='user_add-form__label' for='user_add_チャットメンバー'>チャットメンバー</label>
       </div>
-
       <div class='user_add-form__field--input'>
         <select name="room[user_id]" class="form-select">
           <option value="">ルームへ追加するユーザーを選択してください</option>
@@ -15,7 +13,6 @@
           <% end %>
         </select>
       </div>
-
     </div>
     <div class='user_add-form__field'>
       <%= f.submit "追加する", class: 'user_add-form__action-btn btn btn-warning'%>
