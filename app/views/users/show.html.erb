@@ -1,10 +1,16 @@
 <div class='user-show-wrapper'>
   <div class='container d-flex justify-content-center px-0'>
-
     <div class="user-details-left">
       <div>
-        <div class="user-picture"></div>
+        <div class="user-picture-box">
+          <% if @user.image.present? %>
+            <%= image_tag @user.image, class: "user-picture-box" %>
+          <% else %>
+            <%= image_tag "no_image.png", class: "user-picture-box"%>
+          <% end %>
+        </div>
       </div>
+      <div><%= link_to "編集する", edit_user_path(@user)%></div>
       <div>
         <div class="user-profile">
           <label class="form-text">ユーザープロフィール</label>
@@ -23,15 +29,14 @@
         </div>
       </div>
     </div>
-
     <div class="user-detail-right">
       <div class="dog-detail-box">
-        <%# モデルにてuserに画像を紐づけるアソシエーション追記必要 %>
-        <div class='form-text-box'>
+        <%# 後日実装 %>
+        <%# <div class='form-text-box'>
           <label class="form-text">飼犬の写真</label>
           <div class="form-text">画像</div>
-        </div>
-        <%# モデルにてuserに画像を紐づけるアソシエーション追記必要 %>
+        </div> %>
+        <%# 後日実装 %>
         <div class='form-text-box'>
           <label class="form-text">飼犬の犬種</label>
           <% if @user.dog_breed.present? %>
@@ -66,6 +71,5 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>

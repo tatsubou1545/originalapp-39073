@@ -298,19 +298,18 @@ ul.nav li.nav-item a.nav-link {
 }
 
 
-/* ユーザー詳細ｓ画面 */
+/* ユーザー詳細画面 */
 .user-details-left{
   height: 600px;
   width: 60%;
   background-color: #CCFFCC;
 }
 
-.user-picture{
-height: 300px;
+.user-picture-box{
 width: 300px;
+height: 300px;
 border-radius: 50%;
 margin: auto;
-background-color: antiquewhite;
 }
 
 .user-profile,
@@ -327,4 +326,10 @@ background-color: antiquewhite;
 
 .dog-detail-box{
   background-color: darkgrey;
+}
+
+
+/* ユーザー情報編集画面 */
+.user_icon{
+  margin: 0 190px;
 }
