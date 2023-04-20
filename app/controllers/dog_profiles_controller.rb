@@ -28,6 +28,11 @@ class DogProfilesController < ApplicationController
   end
 
   def destroy
+    if @dog_profile.destroy
+      redirect_to user_path(current_user.id)
+    else
+      redirect_to user_path(current_user.id)
+    end
   end
 
 

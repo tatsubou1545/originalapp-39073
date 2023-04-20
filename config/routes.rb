@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get '/users', to: 'posts#index'
   root to: "posts#index"
   resources :users, only: [:show, :update, :edit] do
-    resources :dog_profiles, only: [:new, :create, :update, :edit]
+    resources :dog_profiles, only: [:new, :create, :update, :edit, :destroy]
   end
   resources :posts do
     member do
