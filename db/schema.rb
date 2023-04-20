@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(version: 2023_04_20_094821) do
 
   create_table "dog_profiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "dog_breed"
-    t.string "dog_number"
     t.date "dog_birthday"
     t.text "dog_profile"
     t.bigint "user_id", null: false
@@ -89,6 +88,7 @@ ActiveRecord::Schema.define(version: 2023_04_20_094821) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "dog_number"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
