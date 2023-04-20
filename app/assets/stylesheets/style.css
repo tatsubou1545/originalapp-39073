@@ -313,8 +313,8 @@ ul.nav li.nav-item a.nav-link {
 }
 
 .user-picture-box{
-width: 250px;
-height: 250px;
+width: 200px;
+height: 200px;
 border-radius: 20px;
 margin: auto;
 }
@@ -367,4 +367,11 @@ margin: auto;
 
 .register-btn{
   width: 100px;
+}
+
+
+
+/* 飼犬情報登録画面 */
+.dog-profile-edit-form{
+  margin-bottom: 20px;
 }

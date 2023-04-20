@@ -13,3 +13,5 @@ ja:
         content: "投稿内容"
         category_id: "カテゴリー"
         image: "画像"
+      dog_profile:
+        dog_breed: "犬種"

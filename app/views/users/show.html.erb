@@ -10,7 +10,10 @@
           <% end %>
         </div>
       </div>
-      <div class="user-edit-link"><%= link_to "アカウント情報編集", edit_user_path(@user), class: "form-text"%></div>
+      <div class="user-edit-link">
+        <span><%= link_to "アカウント情報編集", edit_user_path(@user), class: "form-text" %></span>
+        <span><%= link_to "ワンちゃん情報登録", new_user_dog_profile_path(@user), class: "form-text" %></span>
+      </div>
       <div>
         <div class="user-profile">
           <label class="form-text">ユーザープロフィール</label>

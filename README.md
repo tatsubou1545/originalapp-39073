@@ -75,10 +75,7 @@ https://docs.google.com/spreadsheets/d/1Qo2gGtkPcVQnAIfGzUylmzpu9tJm6oa4jcbs6uJl
 | email              | string | null: false |
 | encrypted_password | string | null: false |
 | user_profile       | text   |             |
-| dog_breed          | string |             |
-| dog_number         | string |             |
-| dog_birthday       | date   |             |
-| dog_profile        | text   |             |
+| dog_number         | string | null: false |
 
 ### Association
 
@@ -94,7 +91,6 @@ https://docs.google.com/spreadsheets/d/1Qo2gGtkPcVQnAIfGzUylmzpu9tJm6oa4jcbs6uJl
 | Column             | Type       | Options                       |
 | ------------------ | ---------- | ----------------------------- |
 | dog_breed          | string     |                               |
-| dog_number         | string     |                               |
 | dog_birthday       | date       |                               |
 | dog_profile        | text       |                               |
 | user               | references | null: false, foreign_key: true|
