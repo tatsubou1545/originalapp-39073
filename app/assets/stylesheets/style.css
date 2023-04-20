@@ -330,6 +330,21 @@ margin: auto;
 
 
 /* ユーザー情報編集画面 */
+.form-wrap{
+  width: 100%;
+  padding: 20px 0;
+}
+
+.form-wrap-container{
+  margin: auto;
+  padding-bottom: 20px;
+  width: 750px;
+}
+
 .user_icon{
   margin: 0 190px;
+}
+
+.register-btn{
+  width: 100px;
 }
