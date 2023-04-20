@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   get '/users', to: 'posts#index'
   root to: "posts#index"
-  resources :users, only: [:show, :update, :edit]
+  resources :users, only: [:show, :update, :edit] do
+    resources :dog_profiles, only: [:new, :create, :update, :edit]
+  end
   resources :posts do
     member do
       get 'download'
