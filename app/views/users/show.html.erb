@@ -39,18 +39,14 @@
           <%# 後日実装 %>
           <div class='form-text-box'>
             <label class="form-text">犬種</label>
-            <% if dog_profile.dog_breed.present? %>
-              <div class="form-text">　<%= dog_profile.dog_breed %></div>
-            <% else %>
-              <div class="form-text">未入力</div>
-            <% end %>
+            <div class="form-text">　<%= dog_profile.dog_breed %></div>
           </div>
           <div class='form-text-box'>
             <label class="form-text">誕生日</label>
             <% if dog_profile.dog_birthday.present? %>
               <div class="form-text">　<%= dog_profile.dog_birthday.strftime('%Y/%m/%d') %></div>
             <% else %>
-              <div class="form-text">未入力</div>
+              <div class="form-text">　未入力</div>
             <% end %>
           </div>
           <div class='form-text-box'>
@@ -58,7 +54,7 @@
             <% if dog_profile.dog_birthday.present? %>
               <div class="form-text">　<%= dog_profile.dog_age %> 歳</div>
             <% else %>
-              <div class="form-text">未入力</div>
+              <div class="form-text">　未入力</div>
             <% end %>
           </div>
           <div class='form-text-box'>
@@ -66,8 +62,11 @@
             <% if dog_profile.dog_profile.present? %>
               <div class="form-text">　<%= dog_profile.dog_profile %></div>
             <% else %>
-              <div class="form-text">未入力</div>
+              <div class="form-text">　未入力</div>
             <% end %>
+          </div>
+          <div class='dog-profile-edit-link'>
+            <%= link_to "編集する", edit_user_dog_profile_path(@user), class: "form-text" %>
           </div>
         </div>
       <% end %>
