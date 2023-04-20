@@ -20,6 +20,11 @@ class DogProfilesController < ApplicationController
   end
 
   def update
+    if @dog_profile.update(profile_params)
+      redirect_to user_path(current_user.id)
+    else
+      render :edit
+    end
   end
 
   def destroy
