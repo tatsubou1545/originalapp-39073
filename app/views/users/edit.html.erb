@@ -39,43 +39,10 @@
       </div>
       <div class="form-group">
         <div class='form-text-wrap'>
-          <label class="form-text">飼っている犬種</label>
-          <span class="form-text">任意</span>
+          <label class="form-text">飼育数</label>
+          <span class="form-text">必須</span>
         </div>
-        <%= f.text_field :dog_breed, class:"form-control", id:"dog_breed", placeholder:"例) トイプードル", maxlength:"20" %>
-      </div>
-      <div class="form-group">
-        <div class='form-text-wrap'>
-          <label class="form-text">飼育頭数</label>
-          <span class="form-text">任意</span>
-        </div>
-        <%= f.text_field :dog_number, class:"form-control", id:"dog_number", placeholder:"例) 2", maxlength:"3" %>
-      </div>
-      <div class="form-group">
-        <div class='form-text-wrap'>
-          <label class="form-text">飼犬の生年月日</label>
-          <span class="form-text">任意</span>
-        </div>
-        <div class='input-birth-wrap '>
-          <%= raw sprintf(
-                      f.date_select(
-                        :dog_birthday,
-                        class:'select-birth',
-                        id:"dog_birthday",
-                        use_month_numbers: true,
-                        prompt:'--',
-                        start_year: 1930,
-                        end_year: (Time.now.year - 5),
-                        date_separator: '%s'),
-                      "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
-        </div>
-      </div>
-        <div class="form-group">
-          <div class='form-text-wrap'>
-            <label class="form-text">飼犬のプロフィール</label>
-            <span class="form-text">任意</span>
-          </div>
-        <%= f.text_area :dog_profile, class:"form-control", id:"dog_profile", placeholder:"例) かわいい家族です。" %>
+        <%= f.text_field :dog_number, class:"form-control", id:"dog_number", placeholder:"半角数字で入力してください", maxlength:"3" %>
       </div>
       <div class="form-group">
         <div class='register-btn'>
