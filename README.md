@@ -87,6 +87,21 @@ https://docs.google.com/spreadsheets/d/1Qo2gGtkPcVQnAIfGzUylmzpu9tJm6oa4jcbs6uJl
 - has_many :room_users
 - has_many :rooms, through: :room_users
 - has_one_attached :image
+- has_many :dog_profiles
+
+## dog_profiles テーブル
+
+| Column             | Type       | Options                       |
+| ------------------ | ---------- | ----------------------------- |
+| dog_breed          | string     |                               |
+| dog_number         | string     |                               |
+| dog_birthday       | date       |                               |
+| dog_profile        | text       |                               |
+| user               | references | null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- has_one_attached :image
 
 
 ## posts テーブル
