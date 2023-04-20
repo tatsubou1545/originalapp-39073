@@ -5,6 +5,7 @@ ja:
   activerecord:
     attributes:
       user:
+        email: "メールアドレス"
         nickname: "ニックネーム"
         dog_number: 飼育数
       post:

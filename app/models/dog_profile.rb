@@ -1,5 +1,4 @@
 class DogProfile < ApplicationRecord
-  validates :dog_number, allow_blank: true, format: { with: /\A[0-9]+\z/, message: "を数字で入力してください" }
 
   belongs_to :user
   has_one_attached :image
