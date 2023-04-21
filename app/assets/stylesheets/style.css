@@ -307,7 +307,7 @@ ul.nav li.nav-item a.nav-link {
   height: 100%;
   width: 60%;
   padding: 20px;
-  margin-right: 30px;
+  margin: 0 30px 230px 0;
   border-radius: 20px;
   border: 1px solid black;
 }
@@ -371,8 +371,23 @@ margin: auto;
 }
 
 
-
 /* 飼犬情報登録画面 */
+.dog-profile-form-wrap{
+  padding: 52px 0;
+}
+
 .dog-profile-edit-form{
   margin-bottom: 20px;
+}
+
+
+/* 飼犬情報編集画面 */
+.dog-edit-form-wrap{
+  padding: 52px 0;
+}
+
+
+.age{
+  height: 20px;
+  width: 20px;
 }
