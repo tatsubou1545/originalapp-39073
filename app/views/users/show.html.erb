@@ -12,22 +12,23 @@
       </div>
       <% if current_user.id == @user.id %>
       <div class="user-edit-link">
-        <span><%= link_to "アカウント情報編集", edit_user_path(@user), class: "form-text" %></span>
-        <span><%= link_to "ワンちゃん情報登録", new_user_dog_profile_path(@user), class: "form-text" %></span>
+        <span><%= link_to "アカウント情報編集", edit_user_path(@user), class: "form-text", style: "color:#20b2aa;" %></span>
+        <span><%= link_to "飼犬情報登録", new_user_dog_profile_path(@user), class: "form-text", style: "color:#ff8c00;" %></span>
       </div>
       <% end %>
-      <div>
-        <div class="user-profile">
-          <label class="form-text">ユーザープロフィール</label>
-          <% if @user.user_profile.present? %>
-            <div class="form-text"><%= @user.user_profile %></div>
-          <% else %>
-            <div class="form-text">未入力</div>
-          <% end %>
-        </div>
-        <div class='user-profile-box'>
-          <div class="form-text">飼育数：<%= @user.dog_profiles.count %> 匹</div>
-        </div>
+      <div class="user_name">
+        <div class="form-text">ユーザー名：<%= @user.nickname %></div>
+      </div>
+      <div class='user-profile-box'>
+        <div class="form-text">飼育数：<%= @user.dog_profiles.count %> 匹</div>
+      </div>
+      <div class="user-profile">
+        <label class="form-text">ユーザープロフィール</label>
+        <% if @user.user_profile.present? %>
+          <div class="form-text"><%= @user.user_profile %></div>
+        <% else %>
+          <div class="form-text">未入力</div>
+        <% end %>
       </div>
     </div>
     <div class="user-detail-right">
@@ -69,8 +70,8 @@
           </div>
           <% if current_user.id == @user.id %>
           <div class='dog-profile-edit-link'>
-            <%= link_to "編集", edit_user_dog_profile_path(@user, dog_profile), class: "form-text" %>
-            <%= link_to "削除", user_dog_profile_path(@user, dog_profile), method: :delete, class: "form-text" %>
+            <%= link_to "編集", edit_user_dog_profile_path(@user, dog_profile), class: "form-text", style: "color:#00bfff;" %>
+            <%= link_to "削除", user_dog_profile_path(@user, dog_profile), method: :delete, class: "form-text", style: "color:#ff4500;"%>
           </div>
           <% end %>
         </div>
