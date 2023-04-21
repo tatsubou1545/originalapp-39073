@@ -34,12 +34,13 @@
     <div class="user-detail-right">
       <% @user.dog_profiles.each do |dog_profile| %>
         <div class="dog-detail-box">
-          <%# 後日実装 %>
-          <%# <div class='form-text-box'>
-            <label class="form-text">飼犬の写真</label>
-            <div class="form-text">画像</div>
-          </div> %>
-          <%# 後日実装 %>
+          <div class="dog-picture-box">
+            <% if dog_profile.image.present? %>
+              <%= image_tag dog_profile.image, class: "dog-picture-box" %>
+            <% else %>
+              <%= image_tag "no_image.png", class: "dog-picture-box"%>
+            <% end %>
+          </div>
           <div class='form-text-box'>
             <label class="form-text">犬種</label>
             <div class="form-text">　<%= dog_profile.dog_breed %></div>

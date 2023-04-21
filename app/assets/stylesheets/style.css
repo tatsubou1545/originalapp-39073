@@ -336,8 +336,9 @@ margin: auto;
 
 .user-detail-right{
   height: 100%;
-  width: 100%;
+  width: 500px;
   font-size: 18px;
+  margin: 0 100px 0 50px;
 }
 
 .dog-detail-box{
@@ -351,6 +352,11 @@ margin: auto;
 .dog-profile-edit-link{
   font-size: 15px;
   margin-top: 10px;
+}
+
+.dog-picture-box{
+  height: 300px;
+  width: 450px;
 }
 
 
