@@ -42,11 +42,11 @@
             <% end %>
           </div>
           <div class='form-text-box'>
-            <label class="form-text">犬種</label>
+            <label class="form-text">◆犬種</label>
             <div class="form-text">　<%= dog_profile.dog_breed %></div>
           </div>
           <div class='form-text-box'>
-            <label class="form-text">誕生日</label>
+            <label class="form-text">◆誕生日</label>
             <% if dog_profile.dog_birthday.present? %>
               <div class="form-text">　<%= dog_profile.dog_birthday.strftime('%Y/%m/%d') %></div>
             <% else %>
@@ -54,7 +54,7 @@
             <% end %>
           </div>
           <div class='form-text-box'>
-            <label class="form-text">年齢</label>
+            <label class="form-text">◆年齢</label>
             <% if dog_profile.dog_birthday.present? %>
               <div class="form-text">　<%= dog_profile.dog_age %> 歳</div>
             <% else %>
@@ -62,9 +62,9 @@
             <% end %>
           </div>
           <div class='form-text-box'>
-            <label class="form-text">プロフィール</label>
+            <label class="form-text">◆プロフィール</label>
             <% if dog_profile.dog_profile.present? %>
-              <div class="form-text">　<%= dog_profile.dog_profile %></div>
+              <div class="form-text"><%= dog_profile.dog_profile %></div>
             <% else %>
               <div class="form-text">　未入力</div>
             <% end %>
