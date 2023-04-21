@@ -386,8 +386,7 @@ margin: auto;
   padding: 52px 0;
 }
 
-
-.age{
-  height: 20px;
-  width: 20px;
+.flash{
+  color: red;
+  text-align: center;
 }
