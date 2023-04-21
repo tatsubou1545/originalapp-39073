@@ -10,10 +10,12 @@
           <% end %>
         </div>
       </div>
+      <% if current_user.id == @user.id %>
       <div class="user-edit-link">
         <span><%= link_to "アカウント情報編集", edit_user_path(@user), class: "form-text" %></span>
         <span><%= link_to "ワンちゃん情報登録", new_user_dog_profile_path(@user), class: "form-text" %></span>
       </div>
+      <% end %>
       <div>
         <div class="user-profile">
           <label class="form-text">ユーザープロフィール</label>
@@ -65,10 +67,12 @@
               <div class="form-text">　未入力</div>
             <% end %>
           </div>
+          <% if current_user.id == @user.id %>
           <div class='dog-profile-edit-link'>
             <%= link_to "編集", edit_user_dog_profile_path(@user, dog_profile), class: "form-text" %>
             <%= link_to "削除", user_dog_profile_path(@user, dog_profile), method: :delete, class: "form-text" %>
           </div>
+          <% end %>
         </div>
       <% end %>
     </div>

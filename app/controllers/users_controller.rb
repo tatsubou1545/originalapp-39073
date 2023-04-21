@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :move_to_index
   before_action :set_params, only: [:show, :update, :edit]
-  before_action :compare_id, only: [:show, :edit]
+  before_action :compare_id, only: [:edit]
 
   def show
   end
