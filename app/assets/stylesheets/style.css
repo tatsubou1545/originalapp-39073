@@ -149,17 +149,15 @@ textarea.form-control {
   height: 100%;
   text-align: center;
   padding: 66px 0;
-  background-image: url("background_edit.jpg");
-  background-position: center;
-  background-size: cover;
 }
 
 .edit-contents .container {
   width: 650px;
   height: 100%;
-  background-color: #FFFFEE;
+  background-color: white;
   padding: 20px;
   border-radius: 10px;
+  border: 1px solid ;
 }
 
 .edit-contents .field{
@@ -171,6 +169,9 @@ textarea.form-control {
   color: black;
 }
 
+.background-box h1{
+  text-decoration: underline red;
+}
 
 /* ルーム一覧画面 */
 .room-index-wrapper{
