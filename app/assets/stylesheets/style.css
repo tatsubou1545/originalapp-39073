@@ -102,18 +102,18 @@ textarea.form-control {
 }
 
 
-/* 詳細画面 */
+/* 投稿詳細画面 */
 .show-content {
   text-align: center;
-  background-image: url("background_show.jpg");
   padding: 10px 0;
 }
 
 .show-content .container{
-  background-color: #FFFFEE;
+  background-color: white;
   width: 750px;
   padding-top: 20px;
   border-radius: 10px;
+  border: 1px solid ;
 }
 
 .show-box-title,
@@ -144,7 +144,7 @@ textarea.form-control {
 }
 
 
-/* 編集画面 */
+/* 投稿編集画面 */
 .edit-contents{
   height: 100%;
   text-align: center;
