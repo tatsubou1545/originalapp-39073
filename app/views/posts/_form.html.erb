@@ -1,28 +1,30 @@
-<%= form_with model: post, local: true, class: "new-form" do |f|%>
-  <%= render 'shared/error_messages', model: f.object %>
-  <div class="field">
-    <%= f.label :title, "タイトル" %>
-    <span>必須</span>
-    <%= f.text_field :title, class: "form-control", id: "Input-title", placeholder: "タイトル(32文字まで)" %>
-  </div>
-  <div class="field">
-    <%= f.label :content, "投稿内容" %>
-    <span>必須</span>
-    <%= f.text_area :content, class: "form-control", id: "Input-content", placeholder: "投稿内容" %>
-  </div>
-  <div class="field">
-    <%= f.label :category_id, "カテゴリー" %>
-    <span>必須</span>
-    <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class: "form-control text-center", id: "category_select"}) %>
-  </div>
-  <div class="field">
-    <%= f.label :image, "投稿画像" %>
-    <span>必須</span>
-    <%= f.file_field :image, class: "form-control", id: "post_image" %>
-  </div>
-  <div id="new-image"></div>
-  <div class="checkbox mb-3">
-    <%= f.submit "投稿する", class: "w-50 btn btn-lg btn-primary" %>
-  </div>
-  <%= link_to 'トップページ', root_path, class: "return-top" %>
-<% end %>
+<div class="post-form-template">
+  <%= form_with model: post, local: true, class: "new-form" do |f|%>
+    <%= render 'error_messages', model: f.object %>
+    <div class="field">
+      <%= f.label :title, "タイトル" %>
+      <span>必須</span>
+      <%= f.text_field :title, class: "form-control", id: "Input-title", placeholder: "タイトル(32文字まで)" %>
+    </div>
+    <div class="field">
+      <%= f.label :content, "投稿内容" %>
+      <span>必須</span>
+      <%= f.text_area :content, class: "form-control", id: "Input-content", placeholder: "投稿内容" %>
+    </div>
+    <div class="field">
+      <%= f.label :category_id, "カテゴリー" %>
+      <span>必須</span>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class: "form-control text-center", id: "category_select"}) %>
+    </div>
+    <div class="field">
+      <%= f.label :image, "投稿画像" %>
+      <span>必須</span>
+      <%= f.file_field :image, class: "form-control", id: "post_image" %>
+    </div>
+    <div id="new-image"></div>
+    <div class="checkbox mb-3">
+      <%= f.submit "投稿する", class: "btn btn-primary" %>
+    </div>
+    <div class="return-top"><%= link_to 'トップページ', root_path %></div>
+  <% end %>
+</div>

@@ -65,16 +65,19 @@ section p {
   height: 100%;
   padding: 66px 0;
   text-align: center;
-  background-image: url("background_image.jpg");
-  background-size: cover;
 }
 
 .post-contents .container {
   max-width: 600px;
   height: 100%;
-  background-color: #FFFFEE;
-  padding: 20px;
+}
+
+.post-form-template{
+  background-color: white;
   border-radius: 10px;
+  border: 1px solid ;
+  padding: 0 20px;
+  margin-top: 40px;
 }
 
 .post-contents .field{
@@ -97,23 +100,24 @@ textarea.form-control {
   margin-top: 30px;
 }
 
-.post-contents .return-top{
-  color: black;
+.return-top{
+  margin-bottom: 20px;
 }
 
 
-/* 詳細画面 */
+
+/* 投稿詳細画面 */
 .show-content {
   text-align: center;
-  background-image: url("background_show.jpg");
   padding: 10px 0;
 }
 
 .show-content .container{
-  background-color: #FFFFEE;
+  background-color: white;
   width: 750px;
   padding-top: 20px;
   border-radius: 10px;
+  border: 1px solid ;
 }
 
 .show-box-title,
@@ -144,22 +148,17 @@ textarea.form-control {
 }
 
 
-/* 編集画面 */
+/* 投稿編集画面 */
 .edit-contents{
   height: 100%;
   text-align: center;
   padding: 66px 0;
-  background-image: url("background_edit.jpg");
-  background-position: center;
-  background-size: cover;
 }
 
 .edit-contents .container {
   width: 650px;
   height: 100%;
-  background-color: #FFFFEE;
   padding: 20px;
-  border-radius: 10px;
 }
 
 .edit-contents .field{
@@ -171,6 +170,9 @@ textarea.form-control {
   color: black;
 }
 
+.background-box h1{
+  text-decoration: underline red;
+}
 
 /* ルーム一覧画面 */
 .room-index-wrapper{
@@ -306,7 +308,7 @@ ul.nav li.nav-item a.nav-link {
 
 .user-details-left{
   height: 100%;
-  width: 60%;
+  width: 500px;
   padding: 20px;
   margin: 0 30px 230px 0;
   border-radius: 20px;
@@ -315,7 +317,7 @@ ul.nav li.nav-item a.nav-link {
 }
 
 .user-picture-box{
-width: 200px;
+width: 250px;
 height: 200px;
 border-radius: 20px;
 margin: auto;
@@ -372,12 +374,25 @@ margin: auto;
   width: 750px;
 }
 
+.user-edit-form{
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid;
+}
+
 .user_icon{
-  margin: 0 190px;
+  margin: 30px 190px 0 190px;
 }
 
 .register-btn{
   width: 100px;
+  margin-bottom: 20px;
+}
+
+.return-mypage{
+  text-align: center;
+  padding-right: 16px;
+  margin-bottom: 5px;
 }
 
 
@@ -396,15 +411,33 @@ margin: auto;
   margin-top: 30px;
 }
 
+.any-text{
+  background-color:#dcdcdc;
+  border-radius: 5px;
+}
+
 
 /* 飼犬情報編集画面 */
 .dog-edit-form-wrap{
   padding: 52px 0;
 }
 
+.dog-profile-edit-form{
+  background-color: white;
+  border: 1px solid;
+  border-radius: 10px;
+  padding-bottom: 20px;
+}
+
 .flash{
   color: red;
   text-align: center;
+}
+
+.error_text{
+  margin-top: 20px;
+  padding-right: 30px;
+  color: red;
 }
 
 
@@ -418,7 +451,7 @@ margin: auto;
   padding: 200px 0 200px 100px;
 }
 
-.post-picture-box{
+.background-box{
   background-image: url("background_image.jpg");
   background-size: cover;
 }

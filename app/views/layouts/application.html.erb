@@ -19,13 +19,16 @@
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li><%= link_to 'Room', rooms_path, class: "nav-link px-2 text-white" %></li>
           </ul>
-          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+          <%# 検索機能実装時に追加 %>
+          <%# <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
             <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
-          </form>
+          </form> %>
+          <%# 検索機能実装時に追加 %>
           <% if user_signed_in? %>
             <div class="dropdown">
               <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                <%= image_tag current_user.image, alt:"", width:32, height:32, class:"rounded-circle me-2" %>
+
                 <strong><%= current_user.nickname %></strong>
               </a>
               <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
