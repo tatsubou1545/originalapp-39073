@@ -402,6 +402,13 @@ margin: auto;
   padding: 52px 0;
 }
 
+.dog-profile-edit-form{
+  background-color: white;
+  border: 1px solid;
+  border-radius: 10px;
+  padding-bottom: 20px;
+}
+
 .flash{
   color: red;
   text-align: center;
