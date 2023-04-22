@@ -406,3 +406,19 @@ margin: auto;
   color: red;
   text-align: center;
 }
+
+
+/* 写真一覧画面 */
+.picture-box{
+  height: 300px;
+  width: 300px;
+}
+
+.box-page-tilte{
+  padding: 200px 0 200px 100px;
+}
+
+.post-picture-box{
+  background-image: url("background_image.jpg");
+  background-size: cover;
+}

@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   root to: "posts#index"
   resources :users, only: [:show, :update, :edit] do
     resources :dog_profiles, only: [:new, :create, :update, :edit, :destroy]
+    member do
+      get 'post_picture'
+    end
   end
   resources :posts do
     member do

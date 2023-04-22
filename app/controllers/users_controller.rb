@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :move_to_index
-  before_action :set_params, only: [:show, :update, :edit]
+  before_action :set_params, only: [:show, :update, :edit, :post_picture]
   before_action :compare_id, only: [:edit]
 
   def show
@@ -15,6 +15,10 @@ class UsersController < ApplicationController
   end
 
   def edit
+  end
+
+  def post_picture
+    @post_picture = @user.posts.all
   end
 
 
