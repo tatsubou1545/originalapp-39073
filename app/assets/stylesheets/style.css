@@ -418,7 +418,7 @@ margin: auto;
   padding: 200px 0 200px 100px;
 }
 
-.post-picture-box{
+.background-box{
   background-image: url("background_image.jpg");
   background-size: cover;
 }
