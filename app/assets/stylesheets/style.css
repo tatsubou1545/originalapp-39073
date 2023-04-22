@@ -70,10 +70,14 @@ section p {
 .post-contents .container {
   max-width: 600px;
   height: 100%;
+}
+
+.post-form-template{
   background-color: white;
-  padding: 20px;
   border-radius: 10px;
   border: 1px solid ;
+  padding: 0 20px;
+  margin-top: 40px;
 }
 
 .post-contents .field{
@@ -97,8 +101,9 @@ textarea.form-control {
 }
 
 .post-contents .return-top{
-  color: black;
+  margin-bottom: 20px;
 }
+
 
 
 /* 投稿詳細画面 */
