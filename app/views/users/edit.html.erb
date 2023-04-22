@@ -1,4 +1,4 @@
-<div class='form-wrap'>
+<div class='form-wrap background-box'>
   <div class='form-wrap-container'>
     <div class='form-header'>
       <h2 class='form-header-text'>
@@ -7,7 +7,7 @@
     </div>
     <div class="user-edit-form">
       <%= form_with model: current_user, local: true do |f| %>
-      <%= render 'shared/error_messages', model: f.object %>
+      <%= render 'error_messages', model: f.object %>
       <div id="new-image" class="user_icon"></div>
       <div class="form-group">
         <div class='form-text-wrap'>
@@ -43,6 +43,7 @@
         </div>
       </div>
       <% end %>
+    <div class= "return-mypage"><%= link_to 'マイページへ', user_path(current_user.id) %></div>
     </div>
   </div>
 </div>

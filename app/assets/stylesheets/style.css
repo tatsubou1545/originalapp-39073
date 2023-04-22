@@ -372,12 +372,25 @@ margin: auto;
   width: 750px;
 }
 
+.user-edit-form{
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid;
+}
+
 .user_icon{
-  margin: 0 190px;
+  margin: 30px 190px 0 190px;
 }
 
 .register-btn{
   width: 100px;
+  margin-bottom: 20px;
+}
+
+.return-mypage{
+  text-align: center;
+  padding-right: 16px;
+  margin-bottom: 20px;
 }
 
 
