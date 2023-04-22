@@ -1,17 +1,22 @@
 <div class="dog-profile-edit-form">
   <%= form_with model: [current_user, dog_profile], local: true do |f| %>
-  <%= render 'shared/error_messages', model: f.object %>
+  <%= render 'error_messages', model: f.object %>
+  <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">犬種</label>
-      <span class="form-text">必須</span>
+      <span class="form-text" style="background-color:#FFD5EC; border-radius: 5px;">必須</span>
     </div>
     <%= f.text_field :dog_breed, class:"form-control", id:"dog_breed", placeholder:"例) トイプードル", maxlength:"20" %>
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">生年月日</label>
-      <span class="form-text">任意</span>
+      <span class="form-text any-text">任意</span>
     </div>
     <div class='input-birth-wrap '>
       <%= raw sprintf(
@@ -30,14 +35,14 @@
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">プロフィール</label>
-      <span class="form-text">任意</span>
+      <span class="form-text any-text">任意</span>
     </div>
     <%= f.text_area :dog_profile, class:"form-control", id:"dog_profile", placeholder:"例) かわいい家族です。" %>
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">写真</label>
-      <span class="form-text">任意</span>
+      <span class="form-text any-text">任意</span>
     </div>
     <%= f.file_field :image, class: "form-control", id: "post_image" %>
   </div>

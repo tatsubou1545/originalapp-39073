@@ -5,11 +5,6 @@
         ワンちゃん情報編集
       </h2>
     </div>
-    <% if flash[:notice] %>
-      <div class="flash">
-        <%= flash[:notice] %>
-      </div>
-    <% end %>
     <%= render partial: "form", locals: { dog_profile: @dog_profile } %>
   </div>
 </div>
