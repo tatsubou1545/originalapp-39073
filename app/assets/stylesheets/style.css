@@ -65,16 +65,15 @@ section p {
   height: 100%;
   padding: 66px 0;
   text-align: center;
-  background-image: url("background_image.jpg");
-  background-size: cover;
 }
 
 .post-contents .container {
   max-width: 600px;
   height: 100%;
-  background-color: #FFFFEE;
+  background-color: white;
   padding: 20px;
   border-radius: 10px;
+  border: 1px solid ;
 }
 
 .post-contents .field{
