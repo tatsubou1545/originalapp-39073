@@ -396,6 +396,11 @@ margin: auto;
   margin-top: 30px;
 }
 
+.any-text{
+  background-color:#dcdcdc;
+  border-radius: 5px;
+}
+
 
 /* 飼犬情報編集画面 */
 .dog-edit-form-wrap{
@@ -412,6 +417,12 @@ margin: auto;
 .flash{
   color: red;
   text-align: center;
+}
+
+.error_text{
+  margin-top: 20px;
+  padding-right: 30px;
+  color: red;
 }
 
 
