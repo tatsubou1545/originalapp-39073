@@ -66,7 +66,6 @@ section p {
   padding: 66px 0;
   text-align: center;
   background-image: url("background_image.jpg");
-  background-position-y: 60%;
   background-size: cover;
 }
 
@@ -301,6 +300,8 @@ ul.nav li.nav-item a.nav-link {
 /* ユーザー詳細画面 */
 .user-show-wrapper{
   padding-top: 30px;
+  background-image: url("background_image.jpg");
+  background-size: cover;
 }
 
 .user-details-left{
@@ -310,6 +311,7 @@ ul.nav li.nav-item a.nav-link {
   margin: 0 30px 230px 0;
   border-radius: 20px;
   border: 1px solid black;
+  background-color: white;
 }
 
 .user-picture-box{
@@ -325,7 +327,8 @@ margin: auto;
 }
 
 .user-profile,
-.user-profile-box {
+.user-profile-box,
+.user_name {
   margin-top: 10px;
   text-align: center;
   font-size: 18px;
@@ -333,8 +336,9 @@ margin: auto;
 
 .user-detail-right{
   height: 100%;
-  width: 100%;
+  width: 500px;
   font-size: 18px;
+  margin: 0 100px 0 50px;
 }
 
 .dog-detail-box{
@@ -342,11 +346,17 @@ margin: auto;
   margin-bottom: 20px;
   border: 1px solid black;
   border-radius: 10px;
+  background-color: white;
 }
 
 .dog-profile-edit-link{
   font-size: 15px;
   margin-top: 10px;
+}
+
+.dog-picture-box{
+  height: 300px;
+  width: 450px;
 }
 
 
@@ -380,6 +390,12 @@ margin: auto;
   margin-bottom: 20px;
 }
 
+.dog_image{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
 
 /* 飼犬情報編集画面 */
 .dog-edit-form-wrap{
@@ -389,4 +405,20 @@ margin: auto;
 .flash{
   color: red;
   text-align: center;
+}
+
+
+/* 写真一覧画面 */
+.picture-box{
+  height: 300px;
+  width: 300px;
+}
+
+.box-page-tilte{
+  padding: 200px 0 200px 100px;
+}
+
+.post-picture-box{
+  background-image: url("background_image.jpg");
+  background-size: cover;
 }

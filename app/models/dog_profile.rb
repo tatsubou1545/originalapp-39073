@@ -3,6 +3,7 @@ class DogProfile < ApplicationRecord
 
   belongs_to :user
   has_one_attached :image
+  
 
   def dog_age
     today = Date.today

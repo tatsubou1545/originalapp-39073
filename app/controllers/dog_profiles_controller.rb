@@ -2,7 +2,7 @@ class DogProfilesController < ApplicationController
   before_action :move_to_index
   before_action :set_params, only: [:edit, :update, :destroy]
   before_action :compare_id, only: [:edit]
-  before_action :set_date, only: [:create, :update_date_check]
+  before_action :set_date, only: [:create, :update]
   before_action :create_date_check, only: [:create]
   before_action :update_date_check, only: [:update]
 

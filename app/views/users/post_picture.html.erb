@@ -1,0 +1,24 @@
+<div class="album py-5 post-picture-box">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <h1 class="box-page-tilte">～My投稿一覧～</h1>
+    <% @post_picture.each do |post_picture| %>
+      <div class="col u-fade-type-up js-scroll-trigger">
+        <div class="card shadow mb-4 bg-body rounded-5">
+          <div class="card-body d-flex flex-column justify-content-between align-items-center">
+            <div class="card-img-top index-picture">
+              <%= image_tag post_picture.image, class: "w-100 rounded-5", style: "height: 250px;" %>
+            </div>
+            <h4 class="text-center tilte-line"><%= post_picture.title %></h4>
+              <div class="btn-group">
+                <%= link_to "詳細", post_path(post_picture.id), class: "btn btn-sm btn-outline-secondary"%>
+              </div>
+              <small class="text-muted">カテゴリー：<%= post_picture.category.name %></small>
+              <small class="text-muted">投稿日：<%= l post_picture.created_at %></small>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>
