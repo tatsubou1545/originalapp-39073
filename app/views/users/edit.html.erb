@@ -1,49 +1,49 @@
-<div class='form-wrap background-box'>
+<div class='form-wrap-user-edit background-box'>
   <div class='form-wrap-container'>
-    <div class='form-header'>
-      <h2 class='form-header-text'>
+    <div class='form-header-user-edit'>
+      <h3 class='form-header-text-user-edit'>
         ユーザー情報編集
-      </h2>
+      </h3>
     </div>
     <div class="user-edit-form">
       <%= form_with model: current_user, local: true do |f| %>
       <%= render 'error_messages', model: f.object %>
       <div id="new-image" class="user_icon"></div>
-      <div class="form-group">
-        <div class='form-text-wrap'>
+      <div class="form-group-user-edit">
+        <div class='form-text-user-edit-wrap'>
           <label class="form-text">アイコン画像</label>
           <span class="form-text">任意</span>
         </div>
         <%= f.file_field :image, class: "form-control", id: "post_image" %>
       </div>
-      <div class="form-group">
-        <div class='form-text-wrap'>
+      <div class="form-group-user-edit">
+        <div class='form-text-user-edit-wrap'>
           <label class="form-text">ニックネーム</label>
           <span class="form-text">必須</span>
         </div>
         <%= f.text_field :nickname, class:"form-control", id:"nickname", placeholder:"例) ユーザー太郎", maxlength:"40" %>
       </div>
-      <div class="form-group">
-        <div class='form-text-wrap'>
+      <div class="form-group-user-edit">
+        <div class='form-text-user-edit-wrap'>
           <label class="form-text">メールアドレス</label>
           <span class="form-text">必須</span>
         </div>
         <%= f.email_field :email, class:"form-control", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
       </div>
-      <div class="form-group">
-        <div class='form-text-wrap'>
+      <div class="form-group-user-edit">
+        <div class='form-text-user-edit-wrap'>
           <label class="form-text">ユーザーのプロフィール</label>
           <span class="form-text">任意</span>
         </div>
         <%= f.text_area :user_profile, class:"form-control", id:"user_profile", placeholder:"ご登録されるユーザーのプロフィールをご記載ください" %>
       </div>
-      <div class="form-group">
-        <div class='register-btn'>
-          <%= f.submit "更新する" ,class:"btn btn-danger" %>
-        </div>
-      </div>
-      <% end %>
-    <div class= "return-mypage"><%= link_to 'マイページへ', user_path(current_user.id) %></div>
     </div>
+    <div class="form-group-user-edit">
+      <div class='registration-user-edit-btn'>
+        <%= f.submit "更新する" ,class:"btn btn-danger" %>
+      </div>
+    </div>
+    <% end %>
+    <div class= "return-mypage-user-edit"><%= link_to 'マイページへ', user_path(current_user.id) %></div>
   </div>
 </div>

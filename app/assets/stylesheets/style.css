@@ -363,15 +363,20 @@ margin: auto;
 
 
 /* ユーザー情報編集画面 */
-.form-wrap{
+.form-header-user-edit{
+  text-align: center;
+  text-decoration: underline red;
+  margin-bottom: 40px;
+}
+
+.form-wrap-user-edit{
   width: 100%;
-  padding: 20px 0;
+  padding: 40px 0 20px 0;
 }
 
 .form-wrap-container{
   margin: auto;
-  padding-bottom: 20px;
-  width: 750px;
+  width: 550px;
 }
 
 .user-edit-form{
@@ -380,18 +385,30 @@ margin: auto;
   border: 1px solid;
 }
 
-.user_icon{
-  margin: 30px 190px 0 190px;
-}
-
-.register-btn{
-  width: 100px;
+.form-group-user-edit{
   margin-bottom: 20px;
+  width: 400px;
+  margin: 0 auto 20px auto;
 }
 
-.return-mypage{
+.form-group-user-edit #user_profile{
+  height: 150px;
+  margin-bottom: 70px;
+}
+
+.user_icon{
+  margin: 30px 0 0 20px;
   text-align: center;
-  padding-right: 16px;
+}
+
+.registration-user-edit-btn{
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.return-mypage-user-edit{
+  text-align: center;
   margin-bottom: 5px;
 }
 
