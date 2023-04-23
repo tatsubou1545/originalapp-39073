@@ -1,9 +1,9 @@
 <%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
-<div class='form-wrap'>
-  <div class='form-header'>
-    <h1 class='form-header-text'>
+<div class='form-wrap-login'>
+  <div class='form-header-login'>
+    <h3 class='form-header-text-login'>
       ユーザー情報入力
-    </h1>
+    </h3>
   </div>
   <div class='login-flash-message'>
     <%= flash[:notice] %>
@@ -27,7 +27,7 @@
   </div>
   <div class='login-btn'>
     <%= f.submit "ログイン" ,class:"btn btn-danger" %>
-    <div class="user-manegiment-root-link"><%= link_to 'トップページ', root_path %></div>
+    <div class="user-login-root-link"><%= link_to 'トップページ', root_path %></div>
   </div>
 </div>
 <% end %>
