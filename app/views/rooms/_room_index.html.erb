@@ -1,5 +1,5 @@
-<div class="room-index-wrapper">
-  <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; height: 100vh;">
+<div class="room-index-wrapper d-flex">
+  <div class="room-index-left d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; height: 100vh;">
     <div class="mx-auto text-white text-decoration-none">
       <span class="fs-4">ルーム一覧</span>
     </div>
@@ -14,5 +14,13 @@
       <% end %>
     </div>
     <hr>
+  </div>
+  <div class="room-index-right">
+    <div class="room-index-right-logo">
+      <%= image_tag "Logo_black.png",  class: "room-logo" %>
+    </div>
+    <div class="room-index-right-message">
+      <h3>~ ルームへようこそ ~</h3>
+    </div>
   </div>
 </div>

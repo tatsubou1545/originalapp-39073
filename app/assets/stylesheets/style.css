@@ -177,6 +177,8 @@ textarea.form-control {
 /* ルーム一覧画面 */
 .room-index-wrapper{
   background-color: white;
+  width: 100vw;
+  height: 100vh;
 }
 
 .room-index-wrapper .container{
@@ -185,6 +187,25 @@ textarea.form-control {
 
 .room-index-wrapper .nav-item{
   font-size: 23px;
+}
+
+.room-index-right{
+  width: 100%;
+  height: 100%;
+}
+
+.room-index-right-logo{
+  height: 100px;
+  width: 240px;
+  position: relative;
+  left: 45%;
+  top: 30%;
+}
+
+.room-index-right-message{
+  position: relative;
+  left: 44%;
+  top: 45%;
 }
 
 
@@ -284,9 +305,13 @@ ul.nav li.nav-item a.nav-link {
 }
 
 .user_add-form__field{
- text-align: center;
- width: 550px;
- margin: auto;
+  text-align: center;
+  width: 550px;
+  margin: auto;
+  background-color: white;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 .user_add-form__action-btn{
@@ -296,6 +321,14 @@ ul.nav li.nav-item a.nav-link {
 .user_add-form__field--title{
   font-size: 30px;
   margin-bottom: 20px;
+}
+
+.user_add-form__label{
+  text-decoration: underline red;
+}
+
+.user_add-form-btn__field{
+  text-align: center;
 }
 
 

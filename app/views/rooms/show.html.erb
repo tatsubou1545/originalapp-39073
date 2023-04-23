@@ -1,4 +1,4 @@
-<div class="wrapper-show">
+<div class="wrapper-show background-box">
   <div class="container">
     <%=form_with url: add_user_room_path, method: :post, local: true do |f|%>
     <div class='user_add-form__field'>
@@ -14,7 +14,7 @@
         </select>
       </div>
     </div>
-    <div class='user_add-form__field'>
+    <div class='user_add-form-btn__field'>
       <%= f.submit "追加する", class: 'user_add-form__action-btn btn btn-warning'%>
     </div>
     </div>
