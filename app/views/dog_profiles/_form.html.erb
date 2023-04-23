@@ -1,10 +1,14 @@
 <%= form_with model: [current_user, dog_profile], local: true do |f| %>
   <div class="dog-profile-edit-message">
     <%= render 'error_messages', model: f.object %>
-    <% if flash[:notice] %>
-        <div class="flash">
-          <%= flash[:notice] %>
-        </div>
+    <% if flash[:dog_create_error] %>
+      <div class="flash">
+        <%= flash[:dog_create_error] %>
+      </div>
+    <% else %>
+      <div class="flash">
+        <%= flash[:dog_update_error] %>
+      </div>
     <% end %>
   </div>
   <div class="dog-profile-edit-form">

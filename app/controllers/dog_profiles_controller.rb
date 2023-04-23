@@ -2,6 +2,7 @@ class DogProfilesController < ApplicationController
   before_action :move_to_index
   before_action :set_params, only: [:edit, :update, :destroy]
   before_action :compare_id, only: [:edit]
+  before_action :error_messsage_reset
   before_action :set_date, only: [:create, :update]
   before_action :create_date_check, only: [:create]
   before_action :update_date_check, only: [:update]
@@ -61,6 +62,10 @@ class DogProfilesController < ApplicationController
     end
   end
 
+  def error_messsage_reset
+    flash.clear
+  end
+
   def set_date
     @year = params[:dog_profile]["dog_birthday(1i)"].to_i
     @month = params[:dog_profile]["dog_birthday(2i)"].to_i
@@ -72,8 +77,10 @@ class DogProfilesController < ApplicationController
     if @year.zero? || @month.zero? || @day.zero?
       if (@year.zero? && @month.zero? && @day.zero?) && @dog_profile.save
         redirect_to user_path(current_user.id)
+      elsif @year.zero? && @month.zero? && @day.zero?
+        render :new
       else
-        flash[:notice] = "正しい日付を入力してください"
+        flash[:dog_create_error] = "日付が正しくありません"
         render :new
       end
       return
@@ -82,14 +89,14 @@ class DogProfilesController < ApplicationController
     begin
       dog_birthday = Date.new(@year, @month, @day)
     rescue ArgumentError, TypeError
-      flash[:notice] = "存在しない日付が入力されています"
+      flash[:dog_create_error] = "存在しない日付が入力されています"
       render :new
       return
     end
 
     dog_birthday = Date.new(@year, @month, @day)
     if dog_birthday > Date.today
-      flash[:notice] = "日付が未来日です"
+      flash[:dog_create_error] = "日付が未来日です"
       render :new
       return
     end
@@ -99,8 +106,10 @@ class DogProfilesController < ApplicationController
     if @year.zero? || @month.zero? || @day.zero?
       if (@year.zero? && @month.zero? && @day.zero?) && @dog_profile.update(profile_params)
         redirect_to user_path(current_user.id)
+      elsif @year.zero? && @month.zero? && @day.zero?
+        render :edit
       else
-        flash[:notice] = "正しい日付を入力してください"
+        flash[:dog_update_error] = "正しい日付を入力してください"
         render :edit
       end
       return
@@ -109,14 +118,14 @@ class DogProfilesController < ApplicationController
     begin
       dog_birthday = Date.new(@year, @month, @day)
     rescue ArgumentError, TypeError
-      flash[:notice] = "存在しない日付が入力されています"
+      flash[:dog_update_error] = "存在しない日付が入力されています"
       render :edit
       return
     end
 
     dog_birthday = Date.new(@year, @month, @day)
     if dog_birthday > Date.today
-      flash[:notice] = "日付が未来日です"
+      flash[:dog_update_error] = "日付が未来日です"
       render :edit
       return
     end
