@@ -495,12 +495,19 @@ margin: auto;
 
 
 /* 飼犬情報編集画面 */
-.dog-edit-form-wrap{
-  padding: 52px 0;
+.dog-profile-edit-form-wrap{
+  padding: 20px ;
 }
 
+.dog-profile-edit-form-wrap-container{
+  width: 550px;
+  margin: auto;
+}
 
-
+.dog-profile-edit-form-wrap-header{
+  text-align: center;
+  text-decoration: underline red;
+}
 .flash{
   color: red;
   text-align: center;
