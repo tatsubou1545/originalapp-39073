@@ -284,9 +284,13 @@ ul.nav li.nav-item a.nav-link {
 }
 
 .user_add-form__field{
- text-align: center;
- width: 550px;
- margin: auto;
+  text-align: center;
+  width: 550px;
+  margin: auto;
+  background-color: white;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 .user_add-form__action-btn{
@@ -296,6 +300,14 @@ ul.nav li.nav-item a.nav-link {
 .user_add-form__field--title{
   font-size: 30px;
   margin-bottom: 20px;
+}
+
+.user_add-form__label{
+  text-decoration: underline red;
+}
+
+.user_add-form-btn__field{
+  text-align: center;
 }
 
 
