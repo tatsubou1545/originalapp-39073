@@ -196,10 +196,16 @@ textarea.form-control {
 
 .room-index-right-logo{
   height: 100px;
-  width: 100px;
+  width: 240px;
   position: relative;
   left: 45%;
   top: 30%;
+}
+
+.room-index-right-message{
+  position: relative;
+  left: 44%;
+  top: 45%;
 }
 
 
