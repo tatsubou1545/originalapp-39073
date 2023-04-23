@@ -414,12 +414,64 @@ margin: auto;
 
 
 /* 飼犬情報登録画面 */
-.dog-profile-form-wrap{
+.dog-profile-new-form-wrap{
   padding: 52px 0;
+  width: 100%;
+}
+
+.dog-profile-new-form-header{
+  text-align: center;
+  text-decoration: underline red;
+  margin-bottom: 30px;
+}
+
+.dog-profile-new-form-wrap-container{
+  width: 550px;
+  margin: auto;
+}
+
+
+/* 飼犬情報登録と編集画面共通フォーム */
+.dog-profile-edit-form{
+  margin-bottom: 20px;
+  padding: 20px ;
+}
+
+.dog-profile-edit-message{
+  margin-bottom: 30px;
 }
 
 .dog-profile-edit-form{
+  background-color: white;
+  border: 1px solid;
+  border-radius: 10px;
+  padding-bottom: 20px;
+}
+
+.dog-profile-edit-form-group{
   margin-bottom: 20px;
+}
+
+.input-birth-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-birth-wrap select {
+  width: 75px;
+  margin-top: 5px;
+  height: 45px;
+  padding-left: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.input-birth-wrap p {
+  line-height: 60px;
+  padding: 0 5px;
 }
 
 .dog_image{
@@ -433,18 +485,21 @@ margin: auto;
   border-radius: 5px;
 }
 
+.dog-profile-edit-register-btn{
+  text-align: center;
+}
+
+.dog-profile-return-mypage{
+  text-align: center;
+}
+
 
 /* 飼犬情報編集画面 */
 .dog-edit-form-wrap{
   padding: 52px 0;
 }
 
-.dog-profile-edit-form{
-  background-color: white;
-  border: 1px solid;
-  border-radius: 10px;
-  padding-bottom: 20px;
-}
+
 
 .flash{
   color: red;
