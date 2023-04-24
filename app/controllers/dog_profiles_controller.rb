@@ -1,7 +1,7 @@
 class DogProfilesController < ApplicationController
   before_action :move_to_index
   before_action :set_params, only: [:edit, :update, :destroy]
-  before_action :compare_id, only: [:edit]
+  before_action :check_user_id, only: [:new, :edit]
   before_action :error_messsage_reset
   before_action :set_date, only: [:create, :update]
   before_action :create_date_check, only: [:create]
@@ -56,9 +56,9 @@ class DogProfilesController < ApplicationController
     @dog_profile = DogProfile.find(params[:id])
   end
 
-  def compare_id
-    unless current_user.id == @dog_profile.user_id
-      redirect_to user_path(current_user.id)
+  def check_user_id
+    unless current_user.id.to_s == params[:user_id]
+      redirect_to root_path 
     end
   end
 
