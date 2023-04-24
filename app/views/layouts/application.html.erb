@@ -28,8 +28,11 @@
           <% if user_signed_in? %>
             <div class="dropdown">
               <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                <%= image_tag current_user.image, alt:"", width:32, height:32, class:"rounded-circle me-2" %>
-
+                <% if current_user.image.present? %>
+                  <%= image_tag current_user.image, width:32, height:32, class:"rounded-circle me-2" %>
+                <% else %>
+                  <%= image_tag "no_image.png", width:32, height:32, class:"rounded-circle me-2" %>
+                <% end %>
                 <strong><%= current_user.nickname %></strong>
               </a>
               <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
