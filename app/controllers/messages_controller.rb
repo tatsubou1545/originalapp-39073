@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
-  before_action :move_to_index, only: [:index, :show]
+  before_action :move_to_index, only: [:index]
   before_action :set_params, only: [:index, :create]
+  before_action :check_id, only: [:index]
 
   def index
     @message = Message.new
@@ -32,5 +33,11 @@ class MessagesController < ApplicationController
 
   def set_params
     @room = Room.find(params[:room_id])
+  end
+
+  def check_id
+    unless @room && @room.users.exists?(id: current_user.id)
+      redirect_to root_path
+    end
   end
 end
