@@ -62,10 +62,6 @@ class DogProfilesController < ApplicationController
     end
   end
 
-  def error_messsage_reset
-    flash.clear
-  end
-
   def set_date
     @year = params[:dog_profile]["dog_birthday(1i)"].to_i
     @month = params[:dog_profile]["dog_birthday(2i)"].to_i
