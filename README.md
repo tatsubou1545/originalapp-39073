@@ -176,7 +176,7 @@ Basic認証
 
 | Column             | Type       | Options                       |
 | ------------------ | ---------- | ----------------------------- |
-| dog_breed          | string     |                               |
+| dog_breed          | string     | null: false                   |
 | dog_birthday       | date       |                               |
 | dog_profile        | text       |                               |
 | user               | references | null: false, foreign_key: true|
