@@ -339,7 +339,32 @@ ul.nav li.nav-item a.nav-link {
   background-size: cover;
 }
 
-.user-details-left{
+.user-details-left-upper{
+  text-align: center;
+  width: 500px;
+  padding: 20px;
+  margin: 0 30px 30px 0;
+  border-radius: 20px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.user-details-left-lower{
+ width: 500px;
+ padding: 0 35px 0 0;
+}
+
+#user-edit-link_1,
+#user-edit-link_2,
+#user-edit-link_3{
+  width: 250px;
+}
+.user-edit-link li{
+  text-align: center;
+  list-style: none;
+  margin-bottom: 10px;
+}
+/* .user-details-left{
   height: 100%;
   width: 500px;
   padding: 20px;
@@ -347,7 +372,7 @@ ul.nav li.nav-item a.nav-link {
   border-radius: 20px;
   border: 1px solid black;
   background-color: white;
-}
+} */
 
 .user-picture-box{
 width: 250px;
