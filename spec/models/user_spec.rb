@@ -3,26 +3,37 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   before do
     @user = FactoryBot.build(:user)
+    @user_update = FactoryBot.create(:user)
+  end
+
+  describe 'ユーザー情報更新' do
+    it '画像添付でもユーザー情報が更新される' do
+      image = fixture_file_upload('app/assets/images/Logo_black.png', 'image/png')
+      set_params={
+        nickname: 'new_nickname',
+        email: 'new_email@example.com',
+        user_profile: 'new_profile',
+        image: image
+      }
+      @user_update.update(set_params)
+      expect(@user_update.nickname).to eq('new_nickname')
+      expect(@user_update.email).to eq('new_email@example.com')
+      expect(@user_update.user_profile).to eq('new_profile')
+      expect(@user_update.image).to be_attached
+    end
   end
 
   describe 'ユーザー新規登録' do
     context '新規登録できる場合' do
-      it 'ニックネーム、email、password、password_confirmation、ユーザープロフィール、、犬種、飼育数、飼犬の誕生日、飼犬のプロフィールが存在すれば登録できる' do
+      it 'ニックネーム、email、password、password_confirmation、ユーザープロフィールが存在すれば登録できる' do
         expect(@user).to be_valid
       end
-      it 'ユーザープロフィール、、犬種、飼育数、飼犬の誕生日、飼犬のプロフィールが空でも登録できる' do
+      it 'ユーザープロフィールが空でも登録できる' do
         user_profile = ''
-        dog_breed = ''
-        dog_number = ''
-        dog_birthday = ''
-        dog_profile = ''
-        expect(@user).to be_valid
-      end
-      it '飼育数が0でも登録できる' do
-        dog_number = '0'
         expect(@user).to be_valid
       end
     end
+
     context '新規登録できない場合' do
       it 'ニックネームが空では登録できない' do
         @user.nickname = ''
