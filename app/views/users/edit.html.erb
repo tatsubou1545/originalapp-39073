@@ -12,28 +12,28 @@
       <div class="form-group-user-edit">
         <div class='form-text-user-edit-wrap'>
           <label class="form-text">アイコン画像</label>
-          <span class="form-text">任意</span>
+          <span class="form-text any-text">任意</span>
         </div>
         <%= f.file_field :image, class: "form-control", id: "post_image" %>
       </div>
       <div class="form-group-user-edit">
         <div class='form-text-user-edit-wrap'>
           <label class="form-text">ニックネーム</label>
-          <span class="form-text">必須</span>
+          <span class="form-text" style="background-color:#FFD5EC; border-radius: 5px;">必須</span>
         </div>
         <%= f.text_field :nickname, class:"form-control", id:"nickname", placeholder:"例) ユーザー太郎", maxlength:"40" %>
       </div>
       <div class="form-group-user-edit">
         <div class='form-text-user-edit-wrap'>
           <label class="form-text">メールアドレス</label>
-          <span class="form-text">必須</span>
+          <span class="form-text" style="background-color:#FFD5EC; border-radius: 5px;">必須</span>
         </div>
         <%= f.email_field :email, class:"form-control", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
       </div>
       <div class="form-group-user-edit">
         <div class='form-text-user-edit-wrap'>
           <label class="form-text">ユーザーのプロフィール</label>
-          <span class="form-text">任意</span>
+          <span class="form-text any-text">任意</span>
         </div>
         <%= f.text_area :user_profile, class:"form-control", id:"user_profile", placeholder:"ご登録されるユーザーのプロフィールをご記載ください" %>
       </div>
