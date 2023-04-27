@@ -26,11 +26,13 @@
       </div>
       <div class="user-details-left-lower">
         <% if current_user.id == @user.id %>
-        <ul class="user-edit-link">
-          <li><%= link_to "アカウント情報編集", edit_user_path(@user), class: "btn btn-warning", id: "user-edit-link_1" %></li>
-          <li><%= link_to "飼犬情報登録", new_user_dog_profile_path(@user), class: "btn btn-warning", id: "user-edit-link_2" %></li>
-          <li><%= link_to "#{@user.nickname}さんの投稿一覧", post_picture_user_path(@user), class: "btn btn-warning", id: "user-edit-link_3" %></li>
-        </ul>
+          <ul class="user-edit-link">
+            <li><%= link_to "アカウント情報編集", edit_user_path(@user), class: "btn btn-warning", id: "user-edit-link_1" %></li>
+            <li><%= link_to "飼犬情報登録", new_user_dog_profile_path(@user), class: "btn btn-warning", id: "user-edit-link_2" %></li>
+            <li><%= link_to "#{@user.nickname}さんの投稿一覧", post_picture_user_path(@user), class: "btn btn-warning", id: "user-edit-link_3" %></li>
+          </ul>
+        <% else %>
+          <div class="user-details-left-space"></div>
         <% end %>
       </div>
     </div>
