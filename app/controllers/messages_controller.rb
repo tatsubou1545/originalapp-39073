@@ -7,6 +7,7 @@ class MessagesController < ApplicationController
     @message = Message.new
     @messages = @room.messages.order("created_at DESC").includes(:user)
     @rooms = Room.all
+    @room_new = Room.new
   end
 
   def create
