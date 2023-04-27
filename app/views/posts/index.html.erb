@@ -47,7 +47,7 @@
               <div class="btn-group">
                 <%= link_to "詳細", post_path(post.id), class: "btn btn-sm btn-outline-secondary"%>
               </div>
-              <small class="text-muted">投稿者：<%= post.user.nickname %></small>
+              <small class="text-muted">投稿者：<%= link_to "#{post.user.nickname}", user_path(post.user_id), class:"text-muted", style:"text-decoration: none;" %></small>
               <small class="text-muted">カテゴリー：<%= post.category.name %></small>
               <small class="text-muted">投稿日：<%= l post.created_at %></small>
           </div>
