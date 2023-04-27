@@ -42,7 +42,11 @@ class RoomsController < ApplicationController
   private
 
   def room_params
-    params.require(:room).permit(:name)
+    if params[:room].present?
+      params.require(:room).permit(:name)
+    else
+      { name: params[:name] }
+    end
   end
 
   def set_params
