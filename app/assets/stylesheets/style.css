@@ -575,9 +575,10 @@ margin: auto;
 
 
 /* 写真一覧画面 */
-.post-picture{
-  height: 100vh;
+.post-picture .container{
+  padding: 30px 0;
 }
+
 .picture-box{
   height: 300px;
   width: 300px;
