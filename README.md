@@ -126,7 +126,7 @@ Basic認証
 今後は、カレンダー機能によるワクチン接種等の予定をリマインド出来るような機能を実装予定です。
 
 ## データベース設計
-[![Image from Gyazo](https://i.gyazo.com/dbfcf4be836f4935d6bbb7f1b0221c10.png)](https://gyazo.com/dbfcf4be836f4935d6bbb7f1b0221c10)
+[![Image from Gyazo](https://i.gyazo.com/3daccc2f1de8f1d5486144dd382001a3.png)](https://gyazo.com/3daccc2f1de8f1d5486144dd382001a3)
 
 ## 画面遷移図
 [![Image from Gyazo](https://i.gyazo.com/fcdb0530d830b42ce6867a98b04e1b0a.png)](https://gyazo.com/fcdb0530d830b42ce6867a98b04e1b0a)
@@ -171,6 +171,7 @@ Basic認証
 - has_many :rooms, through: :room_users
 - has_one_attached :image
 - has_many :dog_profiles
+- has_many :comments
 
 ## dog_profiles テーブル
 
@@ -198,6 +199,7 @@ Basic認証
 ### Association
 - belongs_to :user
 - has_one_attached :image
+- has_many :comments
 
 
 ## rooms テーブル
@@ -236,3 +238,16 @@ Basic認証
 - belongs_to :room
 - belongs_to :user
 - has_one_attached :image
+
+
+## comments テーブル
+
+| Column             | Type       | Options                       |
+| ------------------ | -----------| ----------------------------- |
+| text               | text       |                               |
+| post               | references | null: false, foreign_key: true|
+| user               | references | null: false, foreign_key: true|
+
+### Association
+- belongs_to :post
+- belongs_to :user
