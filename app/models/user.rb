@@ -14,4 +14,5 @@ class User < ApplicationRecord
   has_many :rooms, through: :room_users
   has_one_attached :image
   has_many :dog_profiles
+  has_many :comments
 end
