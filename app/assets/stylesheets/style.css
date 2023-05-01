@@ -147,6 +147,36 @@ textarea.form-control {
   margin: auto;
 }
 
+.container-comment-box{
+  width: 750px;
+  margin: auto;
+  padding-top: 30px;
+}
+
+.comment-form__field{
+  width: 500px;
+  margin: auto;
+  padding-bottom: 10px;
+}
+
+.comments{
+  background-color: #EEEEEE;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid;
+}
+
+.comments p{
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.comment-user{
+  text-decoration: none;
+  color: black;
+}
+
 
 /* 投稿編集画面 */
 .edit-contents{
