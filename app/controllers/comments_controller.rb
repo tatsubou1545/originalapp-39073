@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to post_path(params[:post_id])
     else
-      render post_path(params[:post_id])
+      redirect_to post_path(params[:post_id])
     end
   end
 
