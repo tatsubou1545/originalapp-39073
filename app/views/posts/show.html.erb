@@ -42,13 +42,36 @@
     <div class="comments">
       <h4>＜コメント一覧＞</h4>
       <% @comments.each do |comment| %>
-        <p>
+        <div class="comment-box">
           <strong><%= link_to comment.user.nickname, user_path(comment.user_id), class: "comment-user" %>さん</strong>
-          <span><%= l @post.created_at %></span>
-          <span><%= link_to "編集", root_path, method: :get, class: "comment-edit" %></span>
+          <span><%= l comment.created_at %></span>
+          <span class="comment-edit", id="comment_edit_<%= comment.id %>">編集</span>
           <span><%= link_to "削除", post_comment_path(comment.post.id, comment.id), method: :delete, class:"comment-delete" %></span><br>
           <%= comment.text %>
-        </p>
+          <div class="comment-edit-box hidden" id="comment_edit_input_<%= comment.id %>">
+            <%=form_with model: comment, url: "/posts/#{comment.post.id}/comments/#{comment.id}", method: :patch, local: true do |f|%>
+              <div class='chat-room-form__field'>
+                <%= f.text_field :text, class: "form-control", placeholder: "編集内容を記入してください" %>
+              </div>
+              <div class='chat-room-form__field mt-3'>
+                <%= f.submit "更新する", class: 'chat-room-form__action-btn btn btn-warning'%>
+              </div>
+            <% end %>
+          </div>
+        </div>
+        <script>
+          window.addEventListener('load', function(){
+            const commentEdit = document.getElementById("comment_edit_<%= comment.id %>")
+            const commentEditInput = document.getElementById("comment_edit_input_<%= comment.id %>")
+            commentEdit.addEventListener('click', function() {
+              if (commentEditInput.getAttribute("style") == "display:block;") {
+                commentEditInput.removeAttribute("style")
+              } else {
+                commentEditInput.setAttribute("style", "display:block;")
+              }
+            })
+          })
+        </script>
       <% end %>
     </div>
   </div>

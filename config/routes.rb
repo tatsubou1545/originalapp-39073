@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     end
   end
   resources :posts do
-    resources :comments, only: [:create, :destroy]
+    resources :comments, only: [:create, :update, :destroy]
     member do
       get 'download'
     end
