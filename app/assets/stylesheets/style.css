@@ -177,6 +177,14 @@ textarea.form-control {
   color: black;
 }
 
+.comment-edit{
+  font-size: 14px;
+}
+
+.comment-delete{
+  font-size: 14px;
+}
+
 
 /* 投稿編集画面 */
 .edit-contents{

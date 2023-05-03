@@ -44,7 +44,9 @@
       <% @comments.each do |comment| %>
         <p>
           <strong><%= link_to comment.user.nickname, user_path(comment.user_id), class: "comment-user" %>さん</strong>
-          <span><%= l @post.created_at %></span><br>
+          <span><%= l @post.created_at %></span>
+          <span><%= link_to "編集", root_path, method: :get, class: "comment-edit" %></span>
+          <span><%= link_to "削除", post_comment_path(comment.post.id, comment.id), method: :delete, class:"comment-delete" %></span><br>
           <%= comment.text %>
         </p>
       <% end %>
