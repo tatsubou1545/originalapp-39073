@@ -50,11 +50,11 @@
           <%= comment.text %>
           <div class="comment-edit-box hidden" id="comment_edit_input_<%= comment.id %>">
             <%=form_with model: comment, url: "/posts/#{comment.post.id}/comments/#{comment.id}", method: :patch, local: true do |f|%>
-              <div class='chat-room-form__field'>
+              <div class='comment-edit-form__field'>
                 <%= f.text_field :text, class: "form-control", placeholder: "編集内容を記入してください" %>
               </div>
-              <div class='chat-room-form__field mt-3'>
-                <%= f.submit "更新する", class: 'chat-room-form__action-btn btn btn-warning'%>
+              <div class='comment-edit-form__field'>
+                <%= f.submit "更新する", class: 'comment-edit-form__action-btn'%>
               </div>
             <% end %>
           </div>
