@@ -202,6 +202,12 @@ textarea.form-control {
   font-size:12px;
 }
 
+.comment-box .comment-edit{
+  cursor: pointer;
+  text-decoration: underline;
+  color: #4169e1;
+}
+
 
 /* 投稿編集画面 */
 .edit-contents{
