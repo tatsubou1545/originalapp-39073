@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   end
   resources :posts do
     resources :comments, only: [:create, :update, :destroy]
+    resource :likes, only: [:create, :destroy]
     member do
       get 'download'
     end
