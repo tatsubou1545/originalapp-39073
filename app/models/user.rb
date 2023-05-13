@@ -15,4 +15,5 @@ class User < ApplicationRecord
   has_one_attached :image
   has_many :dog_profiles
   has_many :comments
+  has_many :likes
 end
