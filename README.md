@@ -142,7 +142,7 @@ Basic認証
 今後は、カレンダー機能によるワクチン接種等の予定をリマインド出来るような機能を実装予定です。
 
 ## データベース設計
-[![Image from Gyazo](https://i.gyazo.com/3daccc2f1de8f1d5486144dd382001a3.png)](https://gyazo.com/3daccc2f1de8f1d5486144dd382001a3)
+[![Image from Gyazo](https://i.gyazo.com/b56ceb3db5c819f24d58c49160f1cacd.png)](https://gyazo.com/b56ceb3db5c819f24d58c49160f1cacd)
 
 ## 画面遷移図
 [![Image from Gyazo](https://i.gyazo.com/fcdb0530d830b42ce6867a98b04e1b0a.png)](https://gyazo.com/fcdb0530d830b42ce6867a98b04e1b0a)
@@ -188,6 +188,7 @@ Basic認証
 - has_one_attached :image
 - has_many :dog_profiles
 - has_many :comments
+- has_many :likes
 
 ## dog_profiles テーブル
 
@@ -216,6 +217,7 @@ Basic認証
 - belongs_to :user
 - has_one_attached :image
 - has_many :comments
+- has_many :likes
 
 
 ## rooms テーブル
@@ -263,6 +265,18 @@ Basic認証
 | text               | text       |                               |
 | post               | references | null: false, foreign_key: true|
 | user               | references | null: false, foreign_key: true|
+
+### Association
+- belongs_to :post
+- belongs_to :user
+
+
+## likes テーブル
+
+| Column             | Type       | Options                       |
+| ------------------ | -----------| ----------------------------- |
+| post               | references | foreign_key: true             |
+| user               | references | foreign_key: true             |
 
 ### Association
 - belongs_to :post
