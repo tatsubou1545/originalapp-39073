@@ -52,6 +52,11 @@ section p {
   margin: auto;
 }
 
+.post_likes{
+  text-decoration: none;
+  color: #808080;
+}
+
 
 
 /* 新規投稿画面 */
