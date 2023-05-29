@@ -45,7 +45,7 @@
         <div class="comment-box">
           <strong><%= link_to comment.user.nickname, user_path(comment.user_id), class: "comment-user" %>さん</strong>
           <span><%= l comment.created_at %></span>
-          <% if current_user.id == comment.user.id %>
+          <% if user_signed_in? && current_user.id == comment.user.id %>
             <span class="comment-edit", id="comment_edit_<%= comment.id %>">編集</span>
             <span><%= link_to "削除", post_comment_path(comment.post.id, comment.id), method: :delete, class:"comment-delete" %></span><br>
           <% end %>
