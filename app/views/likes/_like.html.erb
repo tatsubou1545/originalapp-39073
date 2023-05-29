@@ -1,7 +1,9 @@
 <% if user_signed_in? && post.liked_by?(current_user)%>
   <i class="bi bi-heart-fill", style="color: #ff69b4;"></i>
+  <span><%= post.likes.count %></span>
   <%=link_to "いいね", post_likes_path(post.id),  method: :delete, class: "post_likes", remote: true %>
 <% else %>
   <i class="bi bi-heart", style="color: #808080;"></i>
+  <span><%= post.likes.count %></span>
   <%=link_to "いいね", post_likes_path(post.id), method: :post, class: "post_likes", remote: true %>
 <% end %>
